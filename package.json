@@ -1,0 +1,37 @@
+{
+  "name": "webcomponent-vl-blueprint",
+  "version": "1.0.0",
+  "description": "Blauwdruk voor nieuwe webcomponenten",
+  "scripts": {
+    "prepare": "npm update --dev vl-ui-util && npm run prepare:util",
+    "prepare:util": "npm explore vl-ui-util -- npm run util",
+    "test": "wct -l chrome,firefox --npm",
+    "release": "np",
+    "release:prepare": "npm run release:prepare:build && npm run release:prepare:imports && npm run release:prepare:css && npm run release:prepare:commit",
+    "release:prepare:build": "uglifyjs --compress --mangle --output vl-blueprint.js -- *.src.js",
+    "release:prepare:imports": "replace '/node_modules/vl-ui-core/vl-core.src.js' '/node_modules/vl-ui-core/vl-core.js' vl-blueprint.js",
+    "release:prepare:css": "replace '\\.\\./style.css' '/node_modules/vl-ui-blueprint/style.css' vl-blueprint.js",
+    "release:prepare:commit": "git add -f vl-blueprint.js && git commit --amend --no-edit && git pull",
+    "release:testless": "np --yolo",
+    "demo": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milieuinfo/webcomponent-vl-blueprint.git"
+  },
+  "author": "DIDM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/milieuinfo/webcomponent-vl-blueprint/issues"
+  },
+  "homepage": "https://github.com/milieuinfo/webcomponent-vl-blueprint#readme",
+  "dependencies": {
+    "vl-ui-util": "^1.2.23",
+    "vl-ui-core": "^1.4.6",
+    "replace": "^1.1.1"
+  },
+  "devDependencies": {
+    "np": "3.0.4",
+    "web-component-tester": "6.9.2"
+  }
+}
