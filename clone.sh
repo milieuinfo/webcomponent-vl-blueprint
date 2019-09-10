@@ -35,7 +35,7 @@ function replaceInFile() {
     fi
     if [[ ( $1 == "vl-blueprint.src.js" ) || ( $1 == "style.scss" ) ]]; then
         capitalizeFirstLetter $naam
-        sed -i "" -e "s/Blueprint/${NAAM}/g" $fullPath/$1
+        sed -i '' -e 's/Blueprint/${NAAM}/g' $fullPath/$1
     fi
 }
 
