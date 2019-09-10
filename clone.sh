@@ -28,10 +28,10 @@ function capitalizeFirstLetter() {
 }
 
 function replaceInFile() {
-    sed -i "" -e "s/blueprint/${naam}/g" $fullPath/$1
+    sed -i '' -e 's/blueprint/${naam}/g' $fullPath/$1
     if [[ $1 == "bamboo-specs/bamboo.yml" ]]; then
         NAAM=$(echo "$naam" | tr a-z A-Z)
-        sed -i "" -e "s/BLUEPRINT/${NAAM}/g" $fullPath/$1
+        sed -i '' -e 's/BLUEPRINT/${NAAM}/g' $fullPath/$1
     fi
     if [[ ( $1 == "vl-blueprint.src.js" ) || ( $1 == "style.scss" ) ]]; then
         capitalizeFirstLetter $naam
