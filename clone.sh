@@ -6,7 +6,7 @@
 
 function determineDefaultPath() {
     parentDir="$(dirname "${PWD}")"
-    fullPath=$parentDir/${naam}
+    fullPath=$parentDir/"webcomponent-vl-ui-"${naam}
 }
 
 function overwriteDefaultPathWithInputIfPresent() {
@@ -21,6 +21,11 @@ function readInput() {
     read -p "Waar mag het project opgeslagen worden? [$fullPath]: " pad
     overwriteDefaultPathWithInputIfPresent
 }
+function capitalizeFirstLetter() {
+    upper=`echo $1|cut -c1|tr [a-z] [A-Z]`
+    lower=`echo $1|cut -c2-`
+    NAAM=$upper$lower
+}
 
 function replaceInFile() {
     sed -i "" -e "s/blueprint/${naam}/g" $fullPath/$1
@@ -28,10 +33,8 @@ function replaceInFile() {
         NAAM=$(echo "$naam" | tr a-z A-Z)
         sed -i "" -e "s/BLUEPRINT/${NAAM}/g" $fullPath/$1
     fi
-    if [[ $1 == "vl-blueprint.src.js" ]]; then
-        upper=`echo $naam|cut -c1|tr [a-z] [A-Z]`
-        lower=`echo $naam|cut -c2-`
-        NAAM=$upper$lower
+    if [[ ( $1 == "vl-blueprint.src.js" ) || ( $1 == "style.scss" ) ]]; then
+        capitalizeFirstLetter $naam
         sed -i "" -e "s/Blueprint/${NAAM}/g" $fullPath/$1
     fi
 }
@@ -57,6 +60,8 @@ replaceInFile package.json
 replaceInFile bamboo-specs/bamboo.yml
 replaceInFile demo/vl-blueprint.html
 replaceInFile vl-blueprint.src.js
+replaceInFile style.scss
+replaceInFile test/vl-blueprint.test.html
 
 cleanUp *bak
 cleanUp test/*bak
