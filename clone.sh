@@ -51,7 +51,7 @@ function rename() {
 readInput
 
 mkdir -p $fullPath \
-&& rsync -arq . $fullPath --exclude .git --exclude node_modules --exclude README.md --exclude package-lock.json
+&& rsync -arq . $fullPath --exclude .git --exclude node_modules --exclude README.md --exclude clone.sh --exclude package-lock.json
 
 replaceInFile package.json
 replaceInFile bamboo-specs/bamboo.yml
