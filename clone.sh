@@ -22,20 +22,20 @@ function readInput() {
     overwriteDefaultPathWithInputIfPresent
 }
 function capitalizeFirstLetter() {
-    upper=`echo $1|cut -c1|tr [a-z] [A-Z]`
-    lower=`echo $1|cut -c2-`
-    NAAM=$upper$lower
+    upper=$(echo $1|cut -c1|tr [a-z] [A-Z])
+    lower=$(echo $1|cut -c2-)
+    naamWithFirstLetterUpper=$upper$lower
 }
 
 function replaceInFile() {
-    sed -i '' -e 's/blueprint/${naam}/g' $fullPath/$1
+    sed -i "" -e "s/blueprint/${naam}/g" $fullPath/$1
     if [[ $1 == "bamboo-specs/bamboo.yml" ]]; then
-        NAAM=$(echo "$naam" | tr a-z A-Z)
-        sed -i '' -e 's/BLUEPRINT/${NAAM}/g' $fullPath/$1
+        naamInUpper=$(echo "$naam" | tr a-z A-Z)
+        sed -i "" -e "s/BLUEPRINT/${naamInUpper}/g" $fullPath/$1
     fi
     if [[ ( $1 == "vl-blueprint.src.js" ) || ( $1 == "style.scss" ) ]]; then
         capitalizeFirstLetter $naam
-        sed -i '' -e 's/Blueprint/${NAAM}/g' $fullPath/$1
+        sed -i "" -e "s/Blueprint/${naamWithFirstLetterUpper}/g" $fullPath/$1
     fi
 }
 
