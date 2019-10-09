@@ -26,12 +26,12 @@
   },
   "homepage": "https://github.com/milieuinfo/webcomponent-vl-blueprint#readme",
   "dependencies": {
-    "vl-ui-util": "^1.2.23",
-    "vl-ui-core": "^1.4.6",
+    "vl-ui-core": "^2.0.0",
     "replace": "^1.1.1"
   },
   "devDependencies": {
     "np": "3.0.4",
+    "vl-ui-util": "^2.0.0",
     "web-component-tester": "6.9.2"
   }
 }
