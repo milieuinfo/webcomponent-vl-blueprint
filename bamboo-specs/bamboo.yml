@@ -2,8 +2,8 @@
 version: 2
 plan:
   project-key: WEBCO
-  key: VLUIBLUEPRINT
-  name: webcomponent-vl-ui-blueprint
+  key: VLBLUEPRINT
+  name: webcomponent-vl-blueprint
 
 triggers:
   - polling: 130
@@ -48,7 +48,7 @@ Release:
 ---
 version: 2
 plan:
-  key: VLUIBLUEPRINT
+  key: VLBLUEPRINT
 
 plan-permissions:
   - groups:
