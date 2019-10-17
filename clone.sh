@@ -62,6 +62,7 @@ replaceInFile demo/vl-blueprint.html
 replaceInFile vl-blueprint.src.js
 replaceInFile style.scss
 replaceInFile test/vl-blueprint.test.html
+replaceInFile README.md.template
 
 cleanUp *bak
 cleanUp test/*bak
@@ -70,6 +71,7 @@ cleanUp bamboo-specs/*bak
 rename vl-blueprint.src.js vl-${naam}.src.js
 rename demo/vl-blueprint.html demo/vl-${naam}.html
 rename test/vl-blueprint.test.html test/vl-${naam}.test.html
+rename README.md.template README.md
 
 echo "Project aangemaakt onder $fullPath"
 

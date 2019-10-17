@@ -1,5 +1,5 @@
 {
-  "name": "webcomponent-vl-blueprint",
+  "name": "vl-blueprint",
   "version": "1.0.0",
   "description": "Blauwdruk voor nieuwe webcomponenten",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/milieuinfo/webcomponent-vl-blueprint#readme",
   "dependencies": {
-    "vl-ui-util": "^1.2.23",
+    "vl-ui-util": "^2.0.5",
     "vl-ui-core": "^1.4.6",
     "replace": "^1.1.1"
   },
