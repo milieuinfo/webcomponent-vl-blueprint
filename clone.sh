@@ -1,33 +1,37 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ####################
 # Helper functions #
 ####################
 
-function determineDefaultPath() {
+determineDefaultPath() {
     parentDir="$(dirname "${PWD}")"
     fullPath=$parentDir/"webcomponent-vl-ui-"${naam}
 }
 
-function overwriteDefaultPathWithInputIfPresent() {
+overwriteDefaultPathWithInputIfPresent() {
     if [[ -n $pad ]]; then
         fullPath=$pad
     fi
 }
 
-function readInput() {
-    read -p "Wat is de naam van de nieuwe webcomponent? " naam
+readInput() {
+    read -ep "Wat is de naam van de nieuwe webcomponent? " naam
     determineDefaultPath
-    read -p "Waar mag het project opgeslagen worden? [$fullPath]: " pad
+    read -ep "Waar mag het project opgeslagen worden? [$fullPath]: " pad
     overwriteDefaultPathWithInputIfPresent
 }
-function capitalizeFirstLetter() {
+capitalizeFirstLetter() {
     upper=$(echo $1|cut -c1|tr [a-z] [A-Z])
     lower=$(echo $1|cut -c2-)
     naamWithFirstLetterUpper=$upper$lower
 }
 
-function replaceInFile() {
+removeDashes() {
+    withoutDashes=$(echo $1 | tr -d -)
+}
+
+replaceInFile() {
     sed -i "" -e "s/blueprint/${naam}/g" $fullPath/$1
     if [[ $1 == "bamboo-specs/bamboo.yml" ]]; then
         naamInUpper=$(echo "$naam" | tr a-z A-Z)
@@ -35,15 +39,16 @@ function replaceInFile() {
     fi
     if [[ ( $1 == "vl-blueprint.src.js" ) || ( $1 == "style.scss" ) ]]; then
         capitalizeFirstLetter $naam
-        sed -i "" -e "s/Blueprint/${naamWithFirstLetterUpper}/g" $fullPath/$1
+        removeDashes $naamWithFirstLetterUpper
+        sed -i "" -e "s/Blueprint/${withoutDashes}/g" $fullPath/$1
     fi
 }
 
-function cleanUp() {
+cleanUp() {
     rm -rf $fullPath/$1
 }
 
-function rename() {
+rename() {
     mv $fullPath/$1 $fullPath/$2
 }
 
