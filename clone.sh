@@ -27,8 +27,13 @@ capitalizeFirstLetter() {
     naamWithFirstLetterUpper=$upper$lower
 }
 
-removeDashes() {
-    withoutDashes=$(echo $1 | tr -d -)
+removeDashesAndUpperEachFirstLetter() {
+    IFS='-' # hyphen (-) is set as delimiter
+        read -ra ADDR <<< "$1" # str is read into an array as tokens separated by IFS
+        for i in "${ADDR[@]}"; do # access each element of array
+            CLEANED+=${i^}
+        done
+    IFS=' '
 }
 
 replaceInFile() {
@@ -39,8 +44,8 @@ replaceInFile() {
     fi
     if [[ ( $1 == "vl-blueprint.src.js" ) || ( $1 == "style.scss" ) ]]; then
         capitalizeFirstLetter $naam
-        removeDashes $naamWithFirstLetterUpper
-        sed -i "" -e "s/Blueprint/${withoutDashes}/g" $fullPath/$1
+        removeDashesAndUpperEachFirstLetter $naamWithFirstLetterUpper
+        sed -i "" -e "s/Blueprint/${CLEANED}/g" $fullPath/$1
     fi
 }
 
