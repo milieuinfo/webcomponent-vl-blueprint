@@ -13,10 +13,10 @@ prepareEnvironment
 
 readInput() {
     read -ep "Wat is de naam van de nieuwe webcomponent? " naam
+    read -ep "Wat is de description van de component? " description
     determineDefaultPath
     read -ep "Waar mag het project opgeslagen worden? [$fullPath]: " pad
     overwriteDefaultPathWithInputIfPresent
-    read -ep "Wat is de description van de component? " description
 }
 
 #####################
