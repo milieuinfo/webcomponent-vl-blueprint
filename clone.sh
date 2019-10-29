@@ -20,6 +20,7 @@ readInput() {
     determineDefaultPath
     read -ep "Waar mag het project opgeslagen worden? [$fullPath]: " pad
     overwriteDefaultPathWithInputIfPresent
+    read -ep "Wat is de description van de component? " description
 }
 capitalizeFirstLetter() {
     upper=$(echo $1|cut -c1|tr [a-z] [A-Z])
@@ -53,6 +54,10 @@ cleanUp() {
     rm -rf $fullPath/$1
 }
 
+replaceDescription() {
+    sed -i "" -e "s/@description@/${description}/g" $fullPath/README.md.template
+}
+
 rename() {
     mv $fullPath/$1 $fullPath/$2
 }
@@ -73,6 +78,8 @@ replaceInFile vl-blueprint.src.js
 replaceInFile style.scss
 replaceInFile test/vl-blueprint.test.html
 replaceInFile README.md.template
+
+replaceDescription
 
 cleanUp *bak
 cleanUp test/*bak
