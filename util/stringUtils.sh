@@ -17,6 +17,5 @@ removeDashesAndUpperEachFirstLetter() {
 
 replaceDescription() {
     sed -i "" -e "s/@description@/${description}/g" $fullPath/README.md.template
-    touch $fullPath/package.new.json
-    cat package.json | jq --arg desc "${description}" '.description = $desc' > $fullPath/package.new.json
+    cat package.json | jq --arg desc "${description}" '.description = $desc' > $fullPath/package.json
 }
