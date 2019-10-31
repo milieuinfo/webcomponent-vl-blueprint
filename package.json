@@ -1,6 +1,6 @@
 {
   "name": "vl-blueprint",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Blauwdruk voor nieuwe webcomponenten",
   "scripts": {
     "prepare": "npm update --dev vl-ui-util && npm run prepare:util",
