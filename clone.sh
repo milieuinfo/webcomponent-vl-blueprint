@@ -31,22 +31,30 @@ mkdir -p $fullPath \
 replaceDescription
 
 replaceInFile package.json
-replaceInFile bamboo-specs/bamboo.yml
-replaceInFile demo/vl-blueprint.html
 replaceInFile vl-blueprint.src.js
 replaceInFile style.scss
-replaceInFile test/vl-blueprint.test.html
 replaceInFile README.md.template
 
+replaceInFile bamboo-specs/bamboo.yml
+replaceInFile demo/vl-blueprint.html
+replaceInFile test/e2e/components/vl-blueprint.js
+replaceInFile test/e2e/pages/vl-blueprint.page.js
+replaceInFile test/e2e/blueprint.test.js
+replaceInFile test/unit/vl-blueprint.test.html
 
 cleanUp *bak
 cleanUp test/*bak
 cleanUp bamboo-specs/*bak
 
 rename vl-blueprint.src.js vl-${naam}.src.js
+rename README.md.template README.md
+
 rename demo/vl-blueprint.html demo/vl-${naam}.html
 rename test/vl-blueprint.test.html test/vl-${naam}.test.html
-rename README.md.template README.md
+rename test/e2e/components/vl-blueprint.js test/e2e/components/vl-${naam}.js
+rename test/e2e/pages/vl-blueprint.page.js test/e2e/pages/vl-${naam}.page.js
+rename test/e2e/blueprint.test.js test/e2e/${naam}.test.js
+rename test/unit/vl-blueprint.test.html test/unit/vl-${naam}.test.html
 
 echo "Project aangemaakt onder $fullPath"
 
