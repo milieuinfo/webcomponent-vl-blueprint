@@ -3,8 +3,8 @@ const Page = require('./page');
 const config = require('../config');
 
 class VLBlueprintPage extends Page {
-    async _getButton(selector) {
-        return new VlButton(this.driver, selector);
+    async _getBlueprint(selector) {
+        return new VlBlueprint(this.driver, selector);
     }
 
     async load() {

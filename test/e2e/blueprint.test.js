@@ -1,12 +1,12 @@
 
 const { assert, driver } = require('./test');
-const VLBulueprintPage = require('./pages/vl-blueprint.page');
+const VLBlueprintPage = require('./pages/vl-blueprint.page');
 
 describe('vl-blueprint', async () => {
-    const VLBulueprintPage = new VLBlueprintPage(driver);
+    const VLBlueprintPage = new VLBlueprintPage(driver);
 
     before(() => {
-        return VLBulueprintPage.load();
+        return VLBlueprintPage.load();
     });
 
     it('', async () => {

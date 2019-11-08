@@ -6,15 +6,8 @@ source $CWD/stringUtils.sh
 
 replaceInFile() {
     sed -i "" -e "s/blueprint/${naam}/g" $fullPath/$1
-    if [[ $1 == "bamboo-specs/bamboo.yml" ]]; then
-        naamInUpper=$(echo "$naam" | tr a-z A-Z)
-        sed -i "" -e "s/BLUEPRINT/${naamInUpper}/g" $fullPath/$1
-    fi
-    if [[ ( $1 == "vl-blueprint.src.js" ) || ( $1 == "style.scss" ) ]]; then
-        capitalizeFirstLetter $naam
-        removeDashesAndUpperEachFirstLetter $naamWithFirstLetterUpper
-        sed -i "" -e "s/Blueprint/${CLEANED}/g" $fullPath/$1
-    fi
+    sed -i "" -e "s/Blueprint/${naam^}/g" $fullPath/$1
+    sed -i "" -e "s/BLUEPRINT/${naam^^}/g" $fullPath/$1
 }
 
 rename() {

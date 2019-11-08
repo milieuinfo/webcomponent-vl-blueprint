@@ -7,4 +7,4 @@ class VLBlueprint extends VlElement {
 
 }
 
-module.exports = VlButton;
+module.exports = VLBlueprint;
