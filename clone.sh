@@ -46,15 +46,14 @@ cleanUp *bak
 cleanUp test/*bak
 cleanUp bamboo-specs/*bak
 
-# rename vl-blueprint.src.js vl-${naam}.src.js
-# rename README.md.template README.md
+rename vl-blueprint.src.js vl-${naam}.src.js
+rename README.md.template README.md
 
-# rename demo/vl-blueprint.html demo/vl-${naam}.html
-# rename test/vl-blueprint.test.html test/vl-${naam}.test.html
-# rename test/e2e/components/vl-blueprint.js test/e2e/components/vl-${naam}.js
-# rename test/e2e/pages/vl-blueprint.page.js test/e2e/pages/vl-${naam}.page.js
-# rename test/e2e/blueprint.test.js test/e2e/${naam}.test.js
-# rename test/unit/vl-blueprint.test.html test/unit/vl-${naam}.test.html
+rename demo/vl-blueprint.html demo/vl-${naam}.html
+rename test/e2e/components/vl-blueprint.js test/e2e/components/vl-${naam}.js
+rename test/e2e/pages/vl-blueprint.page.js test/e2e/pages/vl-${naam}.page.js
+rename test/e2e/blueprint.test.js test/e2e/${naam}.test.js
+rename test/unit/vl-blueprint.test.html test/unit/vl-${naam}.test.html
 
 echo "Project aangemaakt onder $fullPath"
 

@@ -11,6 +11,12 @@ replaceInFile() {
 }
 
 rename() {
+    if [[ $1 == *"/"* ]]; then
+        BASE=${1##*/}
+        DIR=${1%$BASE}
+        mkdir -p $fullPath/$DIR
+    fi
+
     mv $fullPath/$1 $fullPath/$2
 }
 
