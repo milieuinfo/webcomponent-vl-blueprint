@@ -1,7 +1,7 @@
 # Webcomponent Blueprint
 
 ## Prerequisites
-Recente versie van bash
+Recente versie (5.0.11) van bash.
 ```
 GNU bash, version 5.0.11(1)-release (x86_64-apple-darwin18.6.0)
 Copyright (C) 2019 Free Software Foundation, Inc.
