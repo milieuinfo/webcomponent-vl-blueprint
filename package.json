@@ -37,6 +37,7 @@
     "vl-ui-util": "^2.0.0",
     "wct-browser-legacy": "1.0.2",
     "web-component-tester": "6.9.2",
+    "uglify-es": "3.3.9",
     "replace": "^1.1.1"
   },
   "publishConfig": {
