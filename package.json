@@ -1,5 +1,5 @@
 {
-  "name": "vl-blueprint",
+  "name": "vl-ui-blueprint",
   "version": "0.0.0",
   "description": "Blauwdruk voor nieuwe webcomponenten",
   "scripts": {
@@ -27,16 +27,18 @@
   "homepage": "https://github.com/milieuinfo/webcomponent-vl-blueprint#readme",
   "dependencies": {
     "vl-ui-util": "^2.0.5",
-    "vl-ui-core": "^2.0.0",
-    "replace": "^1.1.1"
+    "vl-ui-core": "^2.0.0"
   },
   "devDependencies": {
     "@govflanders/vl-ui-util": "^3.9.1",
+    "http-server": "0.11.1",
     "np": "3.0.4",
+    "uglify-js-es6": "2.8.9",
     "vl-ui-util": "^2.0.0",
     "wct-browser-legacy": "1.0.2",
     "web-component-tester": "6.9.2",
-    "uglify-es": "3.3.9"
+    "uglify-es": "3.3.9",
+    "replace": "^1.1.1"
   },
   "publishConfig": {
     "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"
