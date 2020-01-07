@@ -36,7 +36,7 @@
     "vl-ui-util": "^2.0.0",
     "wct-browser-legacy": "1.0.2",
     "web-component-tester": "6.9.2",
-    "uglify-js-es6": "2.8.9"
+    "uglify-es": "3.3.9"
   },
   "publishConfig": {
     "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"

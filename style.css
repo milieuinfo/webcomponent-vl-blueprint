@@ -100,7 +100,7 @@ img {
 
 html {
   min-height: 100%;
-  font-family: flanders-sans, sans-serif;
+  font-family: "Flanders Art Sans", sans-serif;
   font-size: 62.5%; }
 
 body {
@@ -123,7 +123,7 @@ body {
     @media screen and (max-width: 1023px) {
       body::before {
         content: "medium"; } }
-    @media screen and (min-width: 767.1px) {
+    @media screen and (min-width: 767px) {
       body::before {
         content: "medium-up"; } }
     @media screen and (max-width: 767px) {
@@ -132,53 +132,73 @@ body {
     @media screen and (max-width: 500px) {
       body::before {
         content: "xsmall"; } }
-    @media screen and (min-width: 1600.1px) {
+    @media screen and (min-width: 1600px) {
       body::before {
         content: "xlarge"; } }
 
 @font-face {
-  font-family: "flanders-sans";
-  src: url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-light.woff2") format("woff2"), url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-light.woff") format("woff");
+  font-family: "Flanders Art Sans";
+  src: url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSans-Light.woff2") format("woff2"), url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSans-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 @font-face {
-  font-family: "flanders-sans";
-  src: url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-regular.woff2") format("woff2"), url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-regular.woff") format("woff");
+  font-family: "Flanders Art Sans";
+  src: url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSans-Regular.woff2") format("woff2"), url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 @font-face {
-  font-family: "flanders-sans";
-  src: url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-medium.woff2") format("woff2"), url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-medium.woff") format("woff");
+  font-family: "Flanders Art Sans";
+  src: url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSans-Medium.woff2") format("woff2"), url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSans-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
 @font-face {
-  font-family: "flanders-sans";
-  src: url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-bold.woff2") format("woff2"), url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-bold.woff") format("woff");
+  font-family: "Flanders Art Sans";
+  src: url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSans-Bold.woff2") format("woff2"), url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal; }
 @font-face {
-  font-family: "flanders-serif";
-  src: url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-serif-light.woff2") format("woff2"), url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-serif-light.woff") format("woff");
+  font-family: "Flanders Art Sans";
+  src: url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSansItalic-Light.woff2") format("woff2"), url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSansItalic-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: italic; }
+@font-face {
+  font-family: "Flanders Art Sans";
+  src: url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSansItalic-Regular.woff2") format("woff2"), url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSansItalic-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: "Flanders Art Sans";
+  src: url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSansItalic-Medium.woff2") format("woff2"), url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSansItalic-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: italic; }
+@font-face {
+  font-family: "Flanders Art Sans";
+  src: url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSansItalic-Bold.woff2") format("woff2"), url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSansItalic-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: italic; }
+@font-face {
+  font-family: "Flanders Art Serif";
+  src: url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSerif-Light.woff2") format("woff2"), url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSerif-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 @font-face {
-  font-family: "flanders-serif";
-  src: url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-serif-regular.woff2") format("woff2"), url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-serif-regular.woff") format("woff");
+  font-family: "Flanders Art Serif";
+  src: url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSerif-Regular.woff2") format("woff2"), url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSerif-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 @font-face {
-  font-family: "flanders-serif";
-  src: url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-serif-medium.woff2") format("woff2"), url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-serif-medium.woff") format("woff");
+  font-family: "Flanders Art Serif";
+  src: url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSerif-Medium.woff2") format("woff2"), url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSerif-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
 @font-face {
-  font-family: "flanders-serif";
-  src: url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-serif-bold.woff2") format("woff2"), url("https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-serif-bold.woff") format("woff");
+  font-family: "Flanders Art Serif";
+  src: url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSerif-Bold.woff2") format("woff2"), url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/flandersart/FlandersArtSerif-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal; }
 @font-face {
   font-family: "vlaanderen-icon";
-  src: url("/font/vlaanderen-icon.woff2") format("woff2"), url("/font/vlaanderen-icon.woff") format("woff");
+  src: url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/iconfont/3.9.1/vlaanderen-icon.woff2") format("woff2"), url("https://cdn.milieuinfo.be/vlaanderen-font/LATEST/font/iconfont/3.9.1/vlaanderen-icon.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 .vl-vi-add::before {
@@ -1357,1084 +1377,1150 @@ body {
 .vl-vi-instagram--after::after {
   content: "\f1c4"; }
 
-.vl-vi-italic::before {
+.vl-vi-ironing::before {
   content: "\f1c5"; }
+
+.vl-vi-ironing--after::after {
+  content: "\f1c5"; }
+
+.vl-vi-italic::before {
+  content: "\f1c6"; }
 
 .vl-vi-italic--after::after {
-  content: "\f1c5"; }
+  content: "\f1c6"; }
 
 .vl-vi-jira::before {
-  content: "\f1c6"; }
+  content: "\f1c7"; }
 
 .vl-vi-jira--after::after {
-  content: "\f1c6"; }
+  content: "\f1c7"; }
 
 .vl-vi-key::before {
-  content: "\f1c7"; }
+  content: "\f1c8"; }
 
 .vl-vi-key--after::after {
-  content: "\f1c7"; }
+  content: "\f1c8"; }
 
 .vl-vi-keyboard::before {
-  content: "\f1c8"; }
+  content: "\f1c9"; }
 
 .vl-vi-keyboard--after::after {
-  content: "\f1c8"; }
+  content: "\f1c9"; }
 
 .vl-vi-laptop::before {
-  content: "\f1c9"; }
+  content: "\f1ca"; }
 
 .vl-vi-laptop--after::after {
-  content: "\f1c9"; }
+  content: "\f1ca"; }
 
 .vl-vi-lightbulb::before {
-  content: "\f1ca"; }
+  content: "\f1cb"; }
 
 .vl-vi-lightbulb--after::after {
-  content: "\f1ca"; }
+  content: "\f1cb"; }
 
 .vl-vi-link-broken::before {
-  content: "\f1cb"; }
+  content: "\f1cc"; }
 
 .vl-vi-link-broken--after::after {
-  content: "\f1cb"; }
+  content: "\f1cc"; }
 
 .vl-vi-link::before {
-  content: "\f1cc"; }
+  content: "\f1cd"; }
 
 .vl-vi-link--after::after {
-  content: "\f1cc"; }
+  content: "\f1cd"; }
 
 .vl-vi-linkedin::before {
-  content: "\f1cd"; }
+  content: "\f1ce"; }
 
 .vl-vi-linkedin--after::after {
-  content: "\f1cd"; }
+  content: "\f1ce"; }
+
+.vl-vi-list-add::before {
+  content: "\f1cf"; }
+
+.vl-vi-list-add--after::after {
+  content: "\f1cf"; }
 
 .vl-vi-list-bullets-alt::before {
-  content: "\f1ce"; }
+  content: "\f1d0"; }
 
 .vl-vi-list-bullets-alt--after::after {
-  content: "\f1ce"; }
+  content: "\f1d0"; }
 
 .vl-vi-list-bullets::before {
-  content: "\f1cf"; }
+  content: "\f1d1"; }
 
 .vl-vi-list-bullets--after::after {
-  content: "\f1cf"; }
+  content: "\f1d1"; }
 
 .vl-vi-list-numbers::before {
-  content: "\f1d0"; }
+  content: "\f1d2"; }
 
 .vl-vi-list-numbers--after::after {
-  content: "\f1d0"; }
+  content: "\f1d2"; }
 
 .vl-vi-list::before {
-  content: "\f1d1"; }
+  content: "\f1d3"; }
 
 .vl-vi-list--after::after {
-  content: "\f1d1"; }
+  content: "\f1d3"; }
 
 .vl-vi-location-direction-arrow::before {
-  content: "\f1d2"; }
+  content: "\f1d4"; }
 
 .vl-vi-location-direction-arrow--after::after {
-  content: "\f1d2"; }
+  content: "\f1d4"; }
 
 .vl-vi-location-gps::before {
-  content: "\f1d3"; }
+  content: "\f1d5"; }
 
 .vl-vi-location-gps--after::after {
-  content: "\f1d3"; }
+  content: "\f1d5"; }
 
 .vl-vi-location-map::before {
-  content: "\f1d4"; }
+  content: "\f1d6"; }
 
 .vl-vi-location-map--after::after {
-  content: "\f1d4"; }
+  content: "\f1d6"; }
 
 .vl-vi-location::before {
-  content: "\f1d5"; }
+  content: "\f1d7"; }
 
 .vl-vi-location--after::after {
-  content: "\f1d5"; }
+  content: "\f1d7"; }
 
 .vl-vi-lock-unlock::before {
-  content: "\f1d6"; }
+  content: "\f1d8"; }
 
 .vl-vi-lock-unlock--after::after {
-  content: "\f1d6"; }
+  content: "\f1d8"; }
 
 .vl-vi-lock::before {
-  content: "\f1d7"; }
+  content: "\f1d9"; }
 
 .vl-vi-lock--after::after {
-  content: "\f1d7"; }
+  content: "\f1d9"; }
 
 .vl-vi-login::before {
-  content: "\f1d8"; }
+  content: "\f1da"; }
 
 .vl-vi-login--after::after {
-  content: "\f1d8"; }
+  content: "\f1da"; }
 
 .vl-vi-logout::before {
-  content: "\f1d9"; }
+  content: "\f1db"; }
 
 .vl-vi-logout--after::after {
-  content: "\f1d9"; }
+  content: "\f1db"; }
 
 .vl-vi-long-arrow::before {
-  content: "\f1da"; }
+  content: "\f1dc"; }
 
 .vl-vi-long-arrow--after::after {
-  content: "\f1da"; }
+  content: "\f1dc"; }
 
 .vl-vi-magnifier::before {
-  content: "\f1db"; }
+  content: "\f1dd"; }
 
 .vl-vi-magnifier--after::after {
-  content: "\f1db"; }
+  content: "\f1dd"; }
 
 .vl-vi-mail::before {
-  content: "\f1dc"; }
+  content: "\f1de"; }
 
 .vl-vi-mail--after::after {
-  content: "\f1dc"; }
+  content: "\f1de"; }
 
 .vl-vi-market::before {
-  content: "\f1dd"; }
+  content: "\f1df"; }
 
 .vl-vi-market--after::after {
-  content: "\f1dd"; }
+  content: "\f1df"; }
 
 .vl-vi-menu::before {
-  content: "\f1de"; }
+  content: "\f1e0"; }
 
 .vl-vi-menu--after::after {
-  content: "\f1de"; }
+  content: "\f1e0"; }
 
 .vl-vi-messenger::before {
-  content: "\f1df"; }
+  content: "\f1e1"; }
 
 .vl-vi-messenger--after::after {
-  content: "\f1df"; }
+  content: "\f1e1"; }
 
 .vl-vi-microphone-off::before {
-  content: "\f1e0"; }
+  content: "\f1e2"; }
 
 .vl-vi-microphone-off--after::after {
-  content: "\f1e0"; }
+  content: "\f1e2"; }
 
 .vl-vi-microphone::before {
-  content: "\f1e1"; }
+  content: "\f1e3"; }
 
 .vl-vi-microphone--after::after {
-  content: "\f1e1"; }
+  content: "\f1e3"; }
 
 .vl-vi-minus-circle::before {
-  content: "\f1e2"; }
+  content: "\f1e4"; }
 
 .vl-vi-minus-circle--after::after {
-  content: "\f1e2"; }
+  content: "\f1e4"; }
 
 .vl-vi-minus::before {
-  content: "\f1e3"; }
+  content: "\f1e5"; }
 
 .vl-vi-minus--after::after {
-  content: "\f1e3"; }
+  content: "\f1e5"; }
 
 .vl-vi-mobile-phone::before {
-  content: "\f1e4"; }
+  content: "\f1e6"; }
 
 .vl-vi-mobile-phone--after::after {
-  content: "\f1e4"; }
+  content: "\f1e6"; }
 
 .vl-vi-move-down::before {
-  content: "\f1e5"; }
+  content: "\f1e7"; }
 
 .vl-vi-move-down--after::after {
-  content: "\f1e5"; }
+  content: "\f1e7"; }
 
 .vl-vi-move-left-right::before {
-  content: "\f1e6"; }
+  content: "\f1e8"; }
 
 .vl-vi-move-left-right--after::after {
-  content: "\f1e6"; }
+  content: "\f1e8"; }
 
 .vl-vi-moving-elevator::before {
-  content: "\f1e7"; }
+  content: "\f1e9"; }
 
 .vl-vi-moving-elevator--after::after {
-  content: "\f1e7"; }
+  content: "\f1e9"; }
 
 .vl-vi-music-note::before {
-  content: "\f1e8"; }
+  content: "\f1ea"; }
 
 .vl-vi-music-note--after::after {
-  content: "\f1e8"; }
+  content: "\f1ea"; }
 
 .vl-vi-nature-leaf::before {
-  content: "\f1e9"; }
+  content: "\f1eb"; }
 
 .vl-vi-nature-leaf--after::after {
-  content: "\f1e9"; }
+  content: "\f1eb"; }
 
 .vl-vi-nature-tree::before {
-  content: "\f1ea"; }
+  content: "\f1ec"; }
 
 .vl-vi-nature-tree--after::after {
-  content: "\f1ea"; }
+  content: "\f1ec"; }
 
 .vl-vi-nav-down-double::before {
-  content: "\f1eb"; }
+  content: "\f1ed"; }
 
 .vl-vi-nav-down-double--after::after {
-  content: "\f1eb"; }
+  content: "\f1ed"; }
 
 .vl-vi-nav-down-light::before {
-  content: "\f1ec"; }
+  content: "\f1ee"; }
 
 .vl-vi-nav-down-light--after::after {
-  content: "\f1ec"; }
+  content: "\f1ee"; }
 
 .vl-vi-nav-down::before {
-  content: "\f1ed"; }
+  content: "\f1ef"; }
 
 .vl-vi-nav-down--after::after {
-  content: "\f1ed"; }
+  content: "\f1ef"; }
 
 .vl-vi-nav-left-double::before {
-  content: "\f1ee"; }
+  content: "\f1f0"; }
 
 .vl-vi-nav-left-double--after::after {
-  content: "\f1ee"; }
+  content: "\f1f0"; }
 
 .vl-vi-nav-left-light::before {
-  content: "\f1ef"; }
+  content: "\f1f1"; }
 
 .vl-vi-nav-left-light--after::after {
-  content: "\f1ef"; }
+  content: "\f1f1"; }
 
 .vl-vi-nav-left::before {
-  content: "\f1f0"; }
+  content: "\f1f2"; }
 
 .vl-vi-nav-left--after::after {
-  content: "\f1f0"; }
+  content: "\f1f2"; }
 
 .vl-vi-nav-right-double::before {
-  content: "\f1f1"; }
+  content: "\f1f3"; }
 
 .vl-vi-nav-right-double--after::after {
-  content: "\f1f1"; }
+  content: "\f1f3"; }
 
 .vl-vi-nav-right-light::before {
-  content: "\f1f2"; }
+  content: "\f1f4"; }
 
 .vl-vi-nav-right-light--after::after {
-  content: "\f1f2"; }
+  content: "\f1f4"; }
 
 .vl-vi-nav-right::before {
-  content: "\f1f3"; }
+  content: "\f1f5"; }
 
 .vl-vi-nav-right--after::after {
-  content: "\f1f3"; }
+  content: "\f1f5"; }
 
 .vl-vi-nav-show-more-horizontal::before {
-  content: "\f1f4"; }
+  content: "\f1f6"; }
 
 .vl-vi-nav-show-more-horizontal--after::after {
-  content: "\f1f4"; }
+  content: "\f1f6"; }
 
 .vl-vi-nav-show-more-vertical::before {
-  content: "\f1f5"; }
+  content: "\f1f7"; }
 
 .vl-vi-nav-show-more-vertical--after::after {
-  content: "\f1f5"; }
+  content: "\f1f7"; }
 
 .vl-vi-nav-up-double::before {
-  content: "\f1f6"; }
+  content: "\f1f8"; }
 
 .vl-vi-nav-up-double--after::after {
-  content: "\f1f6"; }
+  content: "\f1f8"; }
 
 .vl-vi-nav-up-light::before {
-  content: "\f1f7"; }
+  content: "\f1f9"; }
 
 .vl-vi-nav-up-light--after::after {
-  content: "\f1f7"; }
+  content: "\f1f9"; }
 
 .vl-vi-nav-up::before {
-  content: "\f1f8"; }
+  content: "\f1fa"; }
 
 .vl-vi-nav-up--after::after {
-  content: "\f1f8"; }
+  content: "\f1fa"; }
 
 .vl-vi-news::before {
-  content: "\f1f9"; }
+  content: "\f1fb"; }
 
 .vl-vi-news--after::after {
-  content: "\f1f9"; }
+  content: "\f1fb"; }
 
 .vl-vi-newspaper::before {
-  content: "\f1fa"; }
+  content: "\f1fc"; }
 
 .vl-vi-newspaper--after::after {
-  content: "\f1fa"; }
+  content: "\f1fc"; }
 
 .vl-vi-next::before {
-  content: "\f1fb"; }
+  content: "\f1fd"; }
 
 .vl-vi-next--after::after {
-  content: "\f1fb"; }
+  content: "\f1fd"; }
 
 .vl-vi-other-annoyances-alt::before {
-  content: "\f1fc"; }
+  content: "\f1fe"; }
 
 .vl-vi-other-annoyances-alt--after::after {
-  content: "\f1fc"; }
+  content: "\f1fe"; }
 
 .vl-vi-other-annoyances::before {
-  content: "\f1fd"; }
+  content: "\f1ff"; }
 
 .vl-vi-other-annoyances--after::after {
-  content: "\f1fd"; }
+  content: "\f1ff"; }
 
 .vl-vi-paint-brush::before {
-  content: "\f1fe"; }
+  content: "\f200"; }
 
 .vl-vi-paint-brush--after::after {
-  content: "\f1fe"; }
+  content: "\f200"; }
 
 .vl-vi-paper::before {
-  content: "\f1ff"; }
+  content: "\f201"; }
 
 .vl-vi-paper--after::after {
-  content: "\f1ff"; }
+  content: "\f201"; }
 
 .vl-vi-paperclip::before {
-  content: "\f200"; }
+  content: "\f202"; }
 
 .vl-vi-paperclip--after::after {
-  content: "\f200"; }
+  content: "\f202"; }
 
 .vl-vi-paragraph::before {
-  content: "\f201"; }
+  content: "\f203"; }
 
 .vl-vi-paragraph--after::after {
-  content: "\f201"; }
+  content: "\f203"; }
 
 .vl-vi-pause::before {
-  content: "\f202"; }
+  content: "\f204"; }
 
 .vl-vi-pause--after::after {
-  content: "\f202"; }
+  content: "\f204"; }
 
 .vl-vi-pencil-write::before {
-  content: "\f203"; }
+  content: "\f205"; }
 
 .vl-vi-pencil-write--after::after {
-  content: "\f203"; }
+  content: "\f205"; }
 
 .vl-vi-pencil::before {
-  content: "\f204"; }
+  content: "\f206"; }
 
 .vl-vi-pencil--after::after {
-  content: "\f204"; }
+  content: "\f206"; }
 
 .vl-vi-pennants::before {
-  content: "\f205"; }
+  content: "\f207"; }
 
 .vl-vi-pennants--after::after {
-  content: "\f205"; }
+  content: "\f207"; }
 
 .vl-vi-phone-incoming::before {
-  content: "\f206"; }
+  content: "\f208"; }
 
 .vl-vi-phone-incoming--after::after {
-  content: "\f206"; }
+  content: "\f208"; }
+
+.vl-vi-phone-off::before {
+  content: "\f209"; }
+
+.vl-vi-phone-off--after::after {
+  content: "\f209"; }
 
 .vl-vi-phone-outgoing::before {
-  content: "\f207"; }
+  content: "\f20a"; }
 
 .vl-vi-phone-outgoing--after::after {
-  content: "\f207"; }
+  content: "\f20a"; }
 
 .vl-vi-phone-record::before {
-  content: "\f208"; }
+  content: "\f20b"; }
 
 .vl-vi-phone-record--after::after {
-  content: "\f208"; }
+  content: "\f20b"; }
 
 .vl-vi-phone-signal-low::before {
-  content: "\f209"; }
+  content: "\f20c"; }
 
 .vl-vi-phone-signal-low--after::after {
-  content: "\f209"; }
+  content: "\f20c"; }
 
 .vl-vi-phone-speaker::before {
-  content: "\f20a"; }
+  content: "\f20d"; }
 
 .vl-vi-phone-speaker--after::after {
-  content: "\f20a"; }
+  content: "\f20d"; }
 
 .vl-vi-phone::before {
-  content: "\f20b"; }
+  content: "\f20e"; }
 
 .vl-vi-phone--after::after {
-  content: "\f20b"; }
+  content: "\f20e"; }
 
 .vl-vi-pin-paper::before {
-  content: "\f20c"; }
+  content: "\f20f"; }
 
 .vl-vi-pin-paper--after::after {
-  content: "\f20c"; }
+  content: "\f20f"; }
 
 .vl-vi-pin::before {
-  content: "\f20d"; }
+  content: "\f210"; }
 
 .vl-vi-pin--after::after {
-  content: "\f20d"; }
+  content: "\f210"; }
 
 .vl-vi-pinterest::before {
-  content: "\f20e"; }
+  content: "\f211"; }
 
 .vl-vi-pinterest--after::after {
-  content: "\f20e"; }
+  content: "\f211"; }
 
 .vl-vi-places-factory::before {
-  content: "\f20f"; }
+  content: "\f212"; }
 
 .vl-vi-places-factory--after::after {
-  content: "\f20f"; }
+  content: "\f212"; }
 
 .vl-vi-places-home::before {
-  content: "\f210"; }
+  content: "\f213"; }
 
 .vl-vi-places-home--after::after {
-  content: "\f210"; }
+  content: "\f213"; }
 
 .vl-vi-play::before {
-  content: "\f211"; }
+  content: "\f214"; }
 
 .vl-vi-play--after::after {
-  content: "\f211"; }
+  content: "\f214"; }
 
 .vl-vi-playstreet::before {
-  content: "\f212"; }
+  content: "\f215"; }
 
 .vl-vi-playstreet--after::after {
-  content: "\f212"; }
+  content: "\f215"; }
 
 .vl-vi-plug::before {
-  content: "\f213"; }
+  content: "\f216"; }
 
 .vl-vi-plug--after::after {
-  content: "\f213"; }
+  content: "\f216"; }
 
 .vl-vi-plus-circle::before {
-  content: "\f214"; }
+  content: "\f217"; }
 
 .vl-vi-plus-circle--after::after {
-  content: "\f214"; }
+  content: "\f217"; }
 
 .vl-vi-plus::before {
-  content: "\f215"; }
+  content: "\f218"; }
 
 .vl-vi-plus--after::after {
-  content: "\f215"; }
+  content: "\f218"; }
 
 .vl-vi-power-button::before {
-  content: "\f216"; }
+  content: "\f219"; }
 
 .vl-vi-power-button--after::after {
-  content: "\f216"; }
+  content: "\f219"; }
 
 .vl-vi-printer-view::before {
-  content: "\f217"; }
+  content: "\f21a"; }
 
 .vl-vi-printer-view--after::after {
-  content: "\f217"; }
+  content: "\f21a"; }
 
 .vl-vi-programming-bug::before {
-  content: "\f218"; }
+  content: "\f21b"; }
 
 .vl-vi-programming-bug--after::after {
-  content: "\f218"; }
+  content: "\f21b"; }
 
 .vl-vi-publication::before {
-  content: "\f219"; }
+  content: "\f21c"; }
 
 .vl-vi-publication--after::after {
-  content: "\f219"; }
+  content: "\f21c"; }
 
 .vl-vi-question-mark-filled::before {
-  content: "\f21a"; }
+  content: "\f21d"; }
 
 .vl-vi-question-mark-filled--after::after {
-  content: "\f21a"; }
+  content: "\f21d"; }
 
 .vl-vi-question-mark-small::before {
-  content: "\f21b"; }
+  content: "\f21e"; }
 
 .vl-vi-question-mark-small--after::after {
-  content: "\f21b"; }
+  content: "\f21e"; }
 
 .vl-vi-question-mark::before {
-  content: "\f21c"; }
+  content: "\f21f"; }
 
 .vl-vi-question-mark--after::after {
-  content: "\f21c"; }
+  content: "\f21f"; }
 
 .vl-vi-question::before {
-  content: "\f21d"; }
+  content: "\f220"; }
 
 .vl-vi-question--after::after {
-  content: "\f21d"; }
+  content: "\f220"; }
 
 .vl-vi-recreation::before {
-  content: "\f21e"; }
+  content: "\f221"; }
 
 .vl-vi-recreation--after::after {
-  content: "\f21e"; }
+  content: "\f221"; }
 
 .vl-vi-reply-all::before {
-  content: "\f21f"; }
+  content: "\f222"; }
 
 .vl-vi-reply-all--after::after {
-  content: "\f21f"; }
+  content: "\f222"; }
 
 .vl-vi-reply::before {
-  content: "\f220"; }
+  content: "\f223"; }
 
 .vl-vi-reply--after::after {
-  content: "\f220"; }
+  content: "\f223"; }
 
 .vl-vi-rewards-certified-badge::before {
-  content: "\f221"; }
+  content: "\f224"; }
 
 .vl-vi-rewards-certified-badge--after::after {
-  content: "\f221"; }
+  content: "\f224"; }
 
 .vl-vi-rewards-gift::before {
-  content: "\f222"; }
+  content: "\f225"; }
 
 .vl-vi-rewards-gift--after::after {
-  content: "\f222"; }
+  content: "\f225"; }
 
 .vl-vi-road-block::before {
-  content: "\f223"; }
+  content: "\f226"; }
 
 .vl-vi-road-block--after::after {
-  content: "\f223"; }
+  content: "\f226"; }
 
 .vl-vi-road::before {
-  content: "\f224"; }
+  content: "\f227"; }
 
 .vl-vi-road--after::after {
-  content: "\f224"; }
+  content: "\f227"; }
 
 .vl-vi-romance-marriage-license::before {
-  content: "\f225"; }
+  content: "\f228"; }
 
 .vl-vi-romance-marriage-license--after::after {
-  content: "\f225"; }
+  content: "\f228"; }
 
 .vl-vi-save::before {
-  content: "\f226"; }
+  content: "\f229"; }
 
 .vl-vi-save--after::after {
-  content: "\f226"; }
+  content: "\f229"; }
 
 .vl-vi-scaffold::before {
-  content: "\f227"; }
+  content: "\f22a"; }
 
 .vl-vi-scaffold--after::after {
-  content: "\f227"; }
+  content: "\f22a"; }
 
 .vl-vi-scissors::before {
-  content: "\f228"; }
+  content: "\f22b"; }
 
 .vl-vi-scissors--after::after {
-  content: "\f228"; }
+  content: "\f22b"; }
 
 .vl-vi-search::before {
-  content: "\f229"; }
+  content: "\f22c"; }
 
 .vl-vi-search--after::after {
-  content: "\f229"; }
+  content: "\f22c"; }
 
 .vl-vi-server::before {
-  content: "\f22a"; }
+  content: "\f22d"; }
 
 .vl-vi-server--after::after {
-  content: "\f22a"; }
+  content: "\f22d"; }
 
 .vl-vi-settings::before {
-  content: "\f22b"; }
+  content: "\f22e"; }
 
 .vl-vi-settings--after::after {
-  content: "\f22b"; }
+  content: "\f22e"; }
 
 .vl-vi-share-megaphone::before {
-  content: "\f22c"; }
+  content: "\f22f"; }
 
 .vl-vi-share-megaphone--after::after {
-  content: "\f22c"; }
+  content: "\f22f"; }
 
 .vl-vi-share-rss-feed::before {
-  content: "\f22d"; }
+  content: "\f230"; }
 
 .vl-vi-share-rss-feed--after::after {
-  content: "\f22d"; }
+  content: "\f230"; }
 
 .vl-vi-share::before {
-  content: "\f22e"; }
+  content: "\f231"; }
 
 .vl-vi-share--after::after {
-  content: "\f22e"; }
+  content: "\f231"; }
 
 .vl-vi-shipping-truck::before {
-  content: "\f22f"; }
+  content: "\f232"; }
 
 .vl-vi-shipping-truck--after::after {
-  content: "\f22f"; }
+  content: "\f232"; }
 
 .vl-vi-shopping-basket-add::before {
-  content: "\f230"; }
+  content: "\f233"; }
 
 .vl-vi-shopping-basket-add--after::after {
-  content: "\f230"; }
+  content: "\f233"; }
 
 .vl-vi-shopping-basket-subtract::before {
-  content: "\f231"; }
+  content: "\f234"; }
 
 .vl-vi-shopping-basket-subtract--after::after {
-  content: "\f231"; }
+  content: "\f234"; }
 
 .vl-vi-shopping-basket::before {
-  content: "\f232"; }
+  content: "\f235"; }
 
 .vl-vi-shopping-basket--after::after {
-  content: "\f232"; }
+  content: "\f235"; }
+
+.vl-vi-shopping::before {
+  content: "\f236"; }
+
+.vl-vi-shopping--after::after {
+  content: "\f236"; }
 
 .vl-vi-shrink::before {
-  content: "\f233"; }
+  content: "\f237"; }
 
 .vl-vi-shrink--after::after {
-  content: "\f233"; }
+  content: "\f237"; }
 
 .vl-vi-sign-disable::before {
-  content: "\f234"; }
+  content: "\f238"; }
 
 .vl-vi-sign-disable--after::after {
-  content: "\f234"; }
+  content: "\f238"; }
 
 .vl-vi-sign-recycle::before {
-  content: "\f235"; }
+  content: "\f239"; }
 
 .vl-vi-sign-recycle--after::after {
-  content: "\f235"; }
+  content: "\f239"; }
 
 .vl-vi-sitemap::before {
-  content: "\f236"; }
+  content: "\f23a"; }
 
 .vl-vi-sitemap--after::after {
-  content: "\f236"; }
+  content: "\f23a"; }
 
 .vl-vi-skype::before {
-  content: "\f237"; }
+  content: "\f23b"; }
 
 .vl-vi-skype--after::after {
-  content: "\f237"; }
+  content: "\f23b"; }
 
 .vl-vi-smiley-poker-face::before {
-  content: "\f238"; }
+  content: "\f23c"; }
 
 .vl-vi-smiley-poker-face--after::after {
-  content: "\f238"; }
+  content: "\f23c"; }
 
 .vl-vi-smiley-smile::before {
-  content: "\f239"; }
+  content: "\f23d"; }
 
 .vl-vi-smiley-smile--after::after {
-  content: "\f239"; }
+  content: "\f23d"; }
 
 .vl-vi-snapchat::before {
-  content: "\f23a"; }
+  content: "\f23e"; }
 
 .vl-vi-snapchat--after::after {
-  content: "\f23a"; }
+  content: "\f23e"; }
 
 .vl-vi-sort::before {
-  content: "\f23b"; }
+  content: "\f23f"; }
 
 .vl-vi-sort--after::after {
-  content: "\f23b"; }
+  content: "\f23f"; }
 
 .vl-vi-speaker-volume-decrease::before {
-  content: "\f23c"; }
+  content: "\f240"; }
 
 .vl-vi-speaker-volume-decrease--after::after {
-  content: "\f23c"; }
+  content: "\f240"; }
 
 .vl-vi-speaker-volume-high::before {
-  content: "\f23d"; }
+  content: "\f241"; }
 
 .vl-vi-speaker-volume-high--after::after {
-  content: "\f23d"; }
+  content: "\f241"; }
 
 .vl-vi-speaker-volume-increase::before {
-  content: "\f23e"; }
+  content: "\f242"; }
 
 .vl-vi-speaker-volume-increase--after::after {
-  content: "\f23e"; }
+  content: "\f242"; }
 
 .vl-vi-speaker-volume-low::before {
-  content: "\f23f"; }
+  content: "\f243"; }
 
 .vl-vi-speaker-volume-low--after::after {
-  content: "\f23f"; }
+  content: "\f243"; }
 
 .vl-vi-speaker-volume-medium::before {
-  content: "\f240"; }
+  content: "\f244"; }
 
 .vl-vi-speaker-volume-medium--after::after {
-  content: "\f240"; }
+  content: "\f244"; }
 
 .vl-vi-speaker-volume-off::before {
-  content: "\f241"; }
+  content: "\f245"; }
 
 .vl-vi-speaker-volume-off--after::after {
-  content: "\f241"; }
+  content: "\f245"; }
 
 .vl-vi-sports-competition::before {
-  content: "\f242"; }
+  content: "\f246"; }
 
 .vl-vi-sports-competition--after::after {
-  content: "\f242"; }
+  content: "\f246"; }
 
 .vl-vi-spotify::before {
-  content: "\f243"; }
+  content: "\f247"; }
 
 .vl-vi-spotify--after::after {
-  content: "\f243"; }
+  content: "\f247"; }
 
 .vl-vi-stop::before {
-  content: "\f244"; }
+  content: "\f248"; }
 
 .vl-vi-stop--after::after {
-  content: "\f244"; }
+  content: "\f248"; }
 
 .vl-vi-subtract::before {
-  content: "\f245"; }
+  content: "\f249"; }
 
 .vl-vi-subtract--after::after {
-  content: "\f245"; }
+  content: "\f249"; }
 
 .vl-vi-subway::before {
-  content: "\f246"; }
+  content: "\f24a"; }
 
 .vl-vi-subway--after::after {
-  content: "\f246"; }
+  content: "\f24a"; }
 
 .vl-vi-suitcase::before {
-  content: "\f247"; }
+  content: "\f24b"; }
 
 .vl-vi-suitcase--after::after {
-  content: "\f247"; }
+  content: "\f24b"; }
 
 .vl-vi-switches::before {
-  content: "\f248"; }
+  content: "\f24c"; }
 
 .vl-vi-switches--after::after {
-  content: "\f248"; }
+  content: "\f24c"; }
 
 .vl-vi-symbol-wifi::before {
-  content: "\f249"; }
+  content: "\f24d"; }
 
 .vl-vi-symbol-wifi--after::after {
-  content: "\f249"; }
+  content: "\f24d"; }
 
 .vl-vi-synchronize-timeout::before {
-  content: "\f24a"; }
+  content: "\f24e"; }
 
 .vl-vi-synchronize-timeout--after::after {
-  content: "\f24a"; }
+  content: "\f24e"; }
 
 .vl-vi-synchronize::before {
-  content: "\f24b"; }
+  content: "\f24f"; }
 
 .vl-vi-synchronize--after::after {
-  content: "\f24b"; }
+  content: "\f24f"; }
 
 .vl-vi-tag-add::before {
-  content: "\f24c"; }
+  content: "\f250"; }
 
 .vl-vi-tag-add--after::after {
-  content: "\f24c"; }
+  content: "\f250"; }
 
 .vl-vi-tag-check::before {
-  content: "\f24d"; }
+  content: "\f251"; }
 
 .vl-vi-tag-check--after::after {
-  content: "\f24d"; }
+  content: "\f251"; }
 
 .vl-vi-tag-close::before {
-  content: "\f24e"; }
+  content: "\f252"; }
 
 .vl-vi-tag-close--after::after {
-  content: "\f24e"; }
+  content: "\f252"; }
 
 .vl-vi-tag-double::before {
-  content: "\f24f"; }
+  content: "\f253"; }
 
 .vl-vi-tag-double--after::after {
-  content: "\f24f"; }
+  content: "\f253"; }
 
 .vl-vi-tag-edit::before {
-  content: "\f250"; }
+  content: "\f254"; }
 
 .vl-vi-tag-edit--after::after {
-  content: "\f250"; }
+  content: "\f254"; }
 
 .vl-vi-tag-subtract::before {
-  content: "\f251"; }
+  content: "\f255"; }
 
 .vl-vi-tag-subtract--after::after {
-  content: "\f251"; }
+  content: "\f255"; }
 
 .vl-vi-tag-view::before {
-  content: "\f252"; }
+  content: "\f256"; }
 
 .vl-vi-tag-view--after::after {
-  content: "\f252"; }
+  content: "\f256"; }
 
 .vl-vi-tag::before {
-  content: "\f253"; }
+  content: "\f257"; }
 
 .vl-vi-tag--after::after {
-  content: "\f253"; }
+  content: "\f257"; }
 
 .vl-vi-taxi::before {
-  content: "\f254"; }
+  content: "\f258"; }
 
 .vl-vi-taxi--after::after {
-  content: "\f254"; }
+  content: "\f258"; }
 
 .vl-vi-television::before {
-  content: "\f255"; }
+  content: "\f259"; }
 
 .vl-vi-television--after::after {
-  content: "\f255"; }
+  content: "\f259"; }
 
 .vl-vi-terrace::before {
-  content: "\f256"; }
+  content: "\f25a"; }
 
 .vl-vi-terrace--after::after {
-  content: "\f256"; }
+  content: "\f25a"; }
 
 .vl-vi-text-cursor::before {
-  content: "\f257"; }
+  content: "\f25b"; }
 
 .vl-vi-text-cursor--after::after {
-  content: "\f257"; }
+  content: "\f25b"; }
 
 .vl-vi-text-eraser::before {
-  content: "\f258"; }
+  content: "\f25c"; }
 
 .vl-vi-text-eraser--after::after {
-  content: "\f258"; }
+  content: "\f25c"; }
 
 .vl-vi-text-redo::before {
-  content: "\f259"; }
+  content: "\f25d"; }
 
 .vl-vi-text-redo--after::after {
-  content: "\f259"; }
+  content: "\f25d"; }
 
 .vl-vi-text-undo::before {
-  content: "\f25a"; }
+  content: "\f25e"; }
 
 .vl-vi-text-undo--after::after {
-  content: "\f25a"; }
+  content: "\f25e"; }
 
 .vl-vi-timeline::before {
-  content: "\f25b"; }
+  content: "\f25f"; }
 
 .vl-vi-timeline--after::after {
-  content: "\f25b"; }
+  content: "\f25f"; }
 
 .vl-vi-tint::before {
-  content: "\f25c"; }
+  content: "\f260"; }
 
 .vl-vi-tint--after::after {
-  content: "\f25c"; }
+  content: "\f260"; }
 
 .vl-vi-train::before {
-  content: "\f25d"; }
+  content: "\f261"; }
 
 .vl-vi-train--after::after {
-  content: "\f25d"; }
+  content: "\f261"; }
 
 .vl-vi-trash::before {
-  content: "\f25e"; }
+  content: "\f262"; }
 
 .vl-vi-trash--after::after {
-  content: "\f25e"; }
+  content: "\f262"; }
 
 .vl-vi-trophy::before {
-  content: "\f25f"; }
+  content: "\f263"; }
 
 .vl-vi-trophy--after::after {
-  content: "\f25f"; }
+  content: "\f263"; }
 
 .vl-vi-twitter::before {
-  content: "\f260"; }
+  content: "\f264"; }
 
 .vl-vi-twitter--after::after {
-  content: "\f260"; }
+  content: "\f264"; }
 
 .vl-vi-underline::before {
-  content: "\f261"; }
+  content: "\f265"; }
 
 .vl-vi-underline--after::after {
-  content: "\f261"; }
+  content: "\f265"; }
 
 .vl-vi-university::before {
-  content: "\f262"; }
+  content: "\f266"; }
 
 .vl-vi-university--after::after {
-  content: "\f262"; }
+  content: "\f266"; }
 
 .vl-vi-up-down-arrows::before {
-  content: "\f263"; }
+  content: "\f267"; }
 
 .vl-vi-up-down-arrows--after::after {
-  content: "\f263"; }
+  content: "\f267"; }
 
 .vl-vi-upload-harddisk::before {
-  content: "\f264"; }
+  content: "\f268"; }
 
 .vl-vi-upload-harddisk--after::after {
-  content: "\f264"; }
+  content: "\f268"; }
+
+.vl-vi-user-alt::before {
+  content: "\f269"; }
+
+.vl-vi-user-alt--after::after {
+  content: "\f269"; }
+
+.vl-vi-user-download::before {
+  content: "\f26a"; }
+
+.vl-vi-user-download--after::after {
+  content: "\f26a"; }
+
+.vl-vi-user-email::before {
+  content: "\f26b"; }
+
+.vl-vi-user-email--after::after {
+  content: "\f26b"; }
 
 .vl-vi-user-female::before {
-  content: "\f265"; }
+  content: "\f26c"; }
 
 .vl-vi-user-female--after::after {
-  content: "\f265"; }
+  content: "\f26c"; }
 
 .vl-vi-user-group::before {
-  content: "\f266"; }
+  content: "\f26d"; }
 
 .vl-vi-user-group--after::after {
-  content: "\f266"; }
+  content: "\f26d"; }
 
 .vl-vi-user-male::before {
-  content: "\f267"; }
+  content: "\f26e"; }
 
 .vl-vi-user-male--after::after {
-  content: "\f267"; }
+  content: "\f26e"; }
+
+.vl-vi-user-redirect::before {
+  content: "\f26f"; }
+
+.vl-vi-user-redirect--after::after {
+  content: "\f26f"; }
 
 .vl-vi-user-setting::before {
-  content: "\f268"; }
+  content: "\f270"; }
 
 .vl-vi-user-setting--after::after {
-  content: "\f268"; }
+  content: "\f270"; }
 
 .vl-vi-user::before {
-  content: "\f269"; }
+  content: "\f271"; }
 
 .vl-vi-user--after::after {
-  content: "\f269"; }
+  content: "\f271"; }
 
 .vl-vi-video-subtitle::before {
-  content: "\f26a"; }
+  content: "\f272"; }
 
 .vl-vi-video-subtitle--after::after {
-  content: "\f26a"; }
+  content: "\f272"; }
 
 .vl-vi-view-add::before {
-  content: "\f26b"; }
+  content: "\f273"; }
 
 .vl-vi-view-add--after::after {
-  content: "\f26b"; }
+  content: "\f273"; }
 
 .vl-vi-vlaanderen::before {
-  content: "\f26c"; }
+  content: "\f274"; }
 
 .vl-vi-vlaanderen--after::after {
-  content: "\f26c"; }
+  content: "\f274"; }
 
 .vl-vi-vote-flag::before {
-  content: "\f26d"; }
+  content: "\f275"; }
 
 .vl-vi-vote-flag--after::after {
-  content: "\f26d"; }
+  content: "\f275"; }
 
 .vl-vi-vote-heart::before {
-  content: "\f26e"; }
+  content: "\f276"; }
 
 .vl-vi-vote-heart--after::after {
-  content: "\f26e"; }
+  content: "\f276"; }
 
 .vl-vi-vote-star::before {
-  content: "\f26f"; }
+  content: "\f277"; }
 
 .vl-vi-vote-star--after::after {
-  content: "\f26f"; }
+  content: "\f277"; }
 
 .vl-vi-vote-thumbs-down::before {
-  content: "\f270"; }
+  content: "\f278"; }
 
 .vl-vi-vote-thumbs-down--after::after {
-  content: "\f270"; }
+  content: "\f278"; }
 
 .vl-vi-vote-thumbs-up::before {
-  content: "\f271"; }
+  content: "\f279"; }
 
 .vl-vi-vote-thumbs-up--after::after {
-  content: "\f271"; }
+  content: "\f279"; }
+
+.vl-vi-voucher-download::before {
+  content: "\f27a"; }
+
+.vl-vi-voucher-download--after::after {
+  content: "\f27a"; }
+
+.vl-vi-voucher-scissors::before {
+  content: "\f27b"; }
+
+.vl-vi-voucher-scissors--after::after {
+  content: "\f27b"; }
+
+.vl-vi-wallet::before {
+  content: "\f27c"; }
+
+.vl-vi-wallet--after::after {
+  content: "\f27c"; }
 
 .vl-vi-warning::before {
-  content: "\f272"; }
+  content: "\f27d"; }
 
 .vl-vi-warning--after::after {
-  content: "\f272"; }
+  content: "\f27d"; }
 
 .vl-vi-whatsapp::before {
-  content: "\f273"; }
+  content: "\f27e"; }
 
 .vl-vi-whatsapp--after::after {
-  content: "\f273"; }
+  content: "\f27e"; }
 
 .vl-vi-wrench::before {
-  content: "\f274"; }
+  content: "\f27f"; }
 
 .vl-vi-wrench--after::after {
-  content: "\f274"; }
+  content: "\f27f"; }
 
 .vl-vi-youtube::before {
-  content: "\f275"; }
+  content: "\f280"; }
 
 .vl-vi-youtube--after::after {
-  content: "\f275"; }
+  content: "\f280"; }
 
 .vl-vi-zoom-in::before {
-  content: "\f276"; }
+  content: "\f281"; }
 
 .vl-vi-zoom-in--after::after {
-  content: "\f276"; }
+  content: "\f281"; }
 
 .vl-vi-zoom-out::before {
-  content: "\f277"; }
+  content: "\f282"; }
 
 .vl-vi-zoom-out--after::after {
-  content: "\f277"; }
+  content: "\f282"; }
 
 a {
   color: #05c;
   text-decoration: underline;
-  text-decoration-skip: ink; }
+  text-decoration-skip-ink: auto; }
   a:hover, a:focus {
     text-decoration: none;
     color: #003bb0; }
@@ -2444,8 +2530,16 @@ button:focus {
   outline: auto #ffc515 3px; }
 
 button {
-  font-family: flanders-sans, sans-serif;
+  font-family: "Flanders Art Sans", sans-serif;
   cursor: pointer; }
+
+img.vl-image--error {
+  overflow-wrap: break-word;
+  padding: 10px;
+  line-height: 1.25;
+  font-size: 1.6rem;
+  color: var(--vl-theme-fg-color);
+  background-color: #e8ebee; }
 
 .vl-grid {
   position: relative;
@@ -3413,7 +3507,7 @@ button {
 
   .vl-col--omega--xs {
     margin-left: auto; } }
-@media screen and (min-width: 1280.1px) {
+@media screen and (min-width: 1280px) {
   .vl-grid--wide {
     margin-left: calc(-4.16667% - 3rem);
     margin-right: -4.16667%; } }
@@ -3739,13 +3833,19 @@ button {
 
   .vl-form-col--omega--s {
     margin-left: auto; } }
-@media screen and (min-width: 1280.1px) {
+@media screen and (min-width: 1280px) {
   .vl-form-grid--wide {
     margin-left: calc(-4.16667% - 3rem);
     margin-right: -4.16667%; } }
 .vl-page {
+  position: relative;
   width: 100%;
   background-color: #fff; }
+  .vl-page .vl-main-content > .vl-region:last-child {
+    padding-bottom: 10rem; }
+    @media screen and (max-width: 767px) {
+      .vl-page .vl-main-content > .vl-region:last-child {
+        padding-bottom: 7rem; } }
 
 .vl-main-content {
   outline: none;
@@ -3817,5 +3917,792 @@ button {
       width: auto;
       min-width: 0;
       padding: 0 1.5rem; } }
+
+.vl-u-visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  left: 0;
+  top: 0; }
+
+@keyframes fade-transition {
+  0% {
+    transform: translateY(20px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-12px); }
+  60% {
+    transform: translateY(-5px); }
+  90% {
+    transform: translateY(-2px); } }
+.vl-u-align-left {
+  text-align: left !important; }
+
+.vl-u-align-center {
+  text-align: center !important; }
+
+.vl-u-align-right {
+  text-align: right !important; }
+
+@media screen and (min-width: 1023px) {
+  .vl-u-align-left--l {
+    text-align: left !important; }
+
+  .vl-u-align-center--l {
+    text-align: center !important; }
+
+  .vl-u-align-right--l {
+    text-align: right !important; } }
+@media screen and (max-width: 1023px) {
+  .vl-u-align-left--m {
+    text-align: left !important; }
+
+  .vl-u-align-center--m {
+    text-align: center !important; }
+
+  .vl-u-align-right--m {
+    text-align: right !important; } }
+@media screen and (max-width: 767px) {
+  .vl-u-align-left--s {
+    text-align: left !important; }
+
+  .vl-u-align-center--s {
+    text-align: center !important; }
+
+  .vl-u-align-right--s {
+    text-align: right !important; } }
+@media screen and (max-width: 500px) {
+  .vl-u-align-left--xs {
+    text-align: left !important; }
+
+  .vl-u-align-center--xs {
+    text-align: center !important; }
+
+  .vl-u-align-right--xs {
+    text-align: right !important; } }
+.vl-u-flex-align-left,
+.vl-u-flex-align-flex-start {
+  align-items: flex-start !important; }
+
+.vl-u-flex-align-center {
+  align-items: center !important; }
+
+.vl-u-flex-align-right,
+.vl-u-flex-align-flex-end {
+  align-items: flex-end !important; }
+
+.vl-u-flex-align-baseline {
+  align-items: baseline !important; }
+
+.vl-u-flex-align-stretch {
+  align-items: stretch !important; }
+
+.vl-u-flex-v-top,
+.vl-u-flex-v-flex-start {
+  justify-content: flex-start !important; }
+
+.vl-u-flex-v-center {
+  justify-content: center !important; }
+
+.vl-u-flex-v-bottom,
+.vl-u-flex-v-flex-end {
+  justify-content: flex-end !important; }
+
+.vl-u-flex-v-space-between {
+  justify-content: space-between !important; }
+
+.vl-u-flex-v-space-around {
+  justify-content: space-around !important; }
+
+.vl-u-flex-direction-row {
+  flex-direction: row !important; }
+
+.vl-u-flex-direction-column {
+  flex-direction: column !important; }
+
+.vl-u-flex-direction-row-reverse {
+  flex-direction: row-reverse !important; }
+
+.vl-u-flex-direction-column-reverse {
+  flex-direction: column-reverse !important; }
+
+.vl-u-flex-wrap-wrap {
+  flex-wrap: wrap !important; }
+
+.vl-u-flex-wrap-nowrap {
+  flex-wrap: nowrap !important; }
+
+.vl-u-flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important; }
+
+@media screen and (min-width: 1023px) {
+  .vl-u-flex-align-left--l {
+    align-items: flex-start !important; }
+
+  .vl-u-flex-align-left--l,
+  .vl-u-flex-align-flex-start--l {
+    align-items: flex-start !important; }
+
+  .vl-u-flex-align-center--l {
+    align-items: center !important; }
+
+  .vl-u-flex-align-right--l,
+  .vl-u-flex-align-flex-end--l {
+    align-items: flex-end !important; }
+
+  .vl-u-flex-align-baseline--l {
+    align-items: baseline !important; }
+
+  .vl-u-flex-align-stretch--l {
+    align-items: stretch !important; }
+
+  .vl-u-flex-v-top--l,
+  .vl-u-flex-v-flex-start--l {
+    justify-content: flex-start !important; }
+
+  .vl-u-flex-v-center--l {
+    justify-content: center !important; }
+
+  .vl-u-flex-v-bottom--l,
+  .vl-u-flex-v-flex-end--l {
+    justify-content: flex-end !important; }
+
+  .vl-u-flex-v-space-between--l {
+    justify-content: space-between !important; }
+
+  .vl-u-flex-v-space-around--l {
+    justify-content: space-around !important; }
+
+  .vl-u-flex-direction-row--l {
+    flex-direction: row !important; }
+
+  .vl-u-flex-direction-column--l {
+    flex-direction: column !important; }
+
+  .vl-u-flex-direction-row-reverse--l {
+    flex-direction: row-reverse !important; }
+
+  .vl-u-flex-direction-column-reverse--l {
+    flex-direction: column-reverse !important; }
+
+  .vl-u-flex-wrap-wrap--l {
+    flex-wrap: wrap !important; }
+
+  .vl-u-flex-wrap-nowrap--l {
+    flex-wrap: nowrap !important; }
+
+  .vl-u-flex-wrap-reverse--l {
+    flex-wrap: wrap-reverse !important; } }
+@media screen and (max-width: 1023px) {
+  .vl-u-flex-align-left--m {
+    align-items: flex-start !important; }
+
+  .vl-u-flex-align-left--m,
+  .vl-u-flex-align-flex-start--m {
+    align-items: flex-start !important; }
+
+  .vl-u-flex-align-center--m {
+    align-items: center !important; }
+
+  .vl-u-flex-align-right--m,
+  .vl-u-flex-align-flex-end--m {
+    align-items: flex-end !important; }
+
+  .vl-u-flex-align-baseline--m {
+    align-items: baseline !important; }
+
+  .vl-u-flex-align-stretch--m {
+    align-items: stretch !important; }
+
+  .vl-u-flex-v-top--m,
+  .vl-u-flex-v-flex-start--m {
+    justify-content: flex-start !important; }
+
+  .vl-u-flex-v-center--m {
+    justify-content: center !important; }
+
+  .vl-u-flex-v-bottom--m,
+  .vl-u-flex-v-flex-end--m {
+    justify-content: flex-end !important; }
+
+  .vl-u-flex-v-space-between--m {
+    justify-content: space-between !important; }
+
+  .vl-u-flex-v-space-around--m {
+    justify-content: space-around !important; }
+
+  .vl-u-flex-direction-row--m {
+    flex-direction: row !important; }
+
+  .vl-u-flex-direction-column--m {
+    flex-direction: column !important; }
+
+  .vl-u-flex-direction-row-reverse--m {
+    flex-direction: row-reverse !important; }
+
+  .vl-u-flex-direction-column-reverse--m {
+    flex-direction: column-reverse !important; }
+
+  .vl-u-flex-wrap-wrap--m {
+    flex-wrap: wrap !important; }
+
+  .vl-u-flex-wrap-nowrap--m {
+    flex-wrap: nowrap !important; }
+
+  .vl-u-flex-wrap-reverse--m {
+    flex-wrap: wrap-reverse !important; } }
+@media screen and (max-width: 767px) {
+  .vl-u-flex-align-left--s {
+    align-items: flex-start !important; }
+
+  .vl-u-flex-align-left--s,
+  .vl-u-flex-align-flex-start--s {
+    align-items: flex-start !important; }
+
+  .vl-u-flex-align-center--s {
+    align-items: center !important; }
+
+  .vl-u-flex-align-right--s,
+  .vl-u-flex-align-flex-end--s {
+    align-items: flex-end !important; }
+
+  .vl-u-flex-align-baseline--s {
+    align-items: baseline !important; }
+
+  .vl-u-flex-align-stretch--s {
+    align-items: stretch !important; }
+
+  .vl-u-flex-v-top--s,
+  .vl-u-flex-v-flex-start--s {
+    justify-content: flex-start !important; }
+
+  .vl-u-flex-v-center--s {
+    justify-content: center !important; }
+
+  .vl-u-flex-v-bottom--s,
+  .vl-u-flex-v-flex-end--s {
+    justify-content: flex-end !important; }
+
+  .vl-u-flex-v-space-between--s {
+    justify-content: space-between !important; }
+
+  .vl-u-flex-v-space-around--s {
+    justify-content: space-around !important; }
+
+  .vl-u-flex-direction-row--s {
+    flex-direction: row !important; }
+
+  .vl-u-flex-direction-column--s {
+    flex-direction: column !important; }
+
+  .vl-u-flex-direction-row-reverse--s {
+    flex-direction: row-reverse !important; }
+
+  .vl-u-flex-direction-column-reverse--s {
+    flex-direction: column-reverse !important; }
+
+  .vl-u-flex-wrap-wrap--s {
+    flex-wrap: wrap !important; }
+
+  .vl-u-flex-wrap-nowrap--s {
+    flex-wrap: nowrap !important; }
+
+  .vl-u-flex-wrap-reverse--s {
+    flex-wrap: wrap-reverse !important; } }
+@media screen and (max-width: 500px) {
+  .vl-u-flex-align-left--xs {
+    align-items: flex-start !important; }
+
+  .vl-u-flex-align-left--xs,
+  .vl-u-flex-align-flex-start--xs {
+    align-items: flex-start !important; }
+
+  .vl-u-flex-align-center--xs {
+    align-items: center !important; }
+
+  .vl-u-flex-align-right--xs,
+  .vl-u-flex-align-flex-end--xs {
+    align-items: flex-end !important; }
+
+  .vl-u-flex-align-baseline--xs {
+    align-items: baseline !important; }
+
+  .vl-u-flex-align-stretch--xs {
+    align-items: stretch !important; }
+
+  .vl-u-flex-v-top--xs,
+  .vl-u-flex-v-flex-start--xs {
+    justify-content: flex-start !important; }
+
+  .vl-u-flex-v-center--xs {
+    justify-content: center !important; }
+
+  .vl-u-flex-v-bottom--xs,
+  .vl-u-flex-v-flex-end--xs {
+    justify-content: flex-end !important; }
+
+  .vl-u-flex-v-space-between--xs {
+    justify-content: space-between !important; }
+
+  .vl-u-flex-v-space-around--xs {
+    justify-content: space-around !important; }
+
+  .vl-u-flex-direction-row--xs {
+    flex-direction: row !important; }
+
+  .vl-u-flex-direction-column--xs {
+    flex-direction: column !important; }
+
+  .vl-u-flex-direction-row-reverse--xs {
+    flex-direction: row-reverse !important; }
+
+  .vl-u-flex-direction-column-reverse--xs {
+    flex-direction: column-reverse !important; }
+
+  .vl-u-flex-wrap-wrap--xs {
+    flex-wrap: wrap !important; }
+
+  .vl-u-flex-wrap-nowrap--xs {
+    flex-wrap: nowrap !important; }
+
+  .vl-u-flex-wrap-reverse--xs {
+    flex-wrap: wrap-reverse !important; } }
+.vl-u-bg-alt {
+  background-color: #e8ebee; }
+
+.vl-u-border {
+  border-left-style: solid;
+  border-left-width: 0.5rem;
+  border-color: #ffe615;
+  padding-left: 3.5rem; }
+  @media screen and (max-width: 767px) {
+    .vl-u-border {
+      padding-left: 1.75rem; } }
+
+button.vl-vi {
+  border: 0;
+  appearance: none;
+  padding: 0;
+  outline: none; }
+
+a.vl-vi {
+  text-decoration: none; }
+
+.vl-vi.vl-vi-u-hidden-text {
+  font-size: 0; }
+.vl-vi.vl-vi-u-xs::before {
+  font-size: 0.8rem; }
+.vl-vi.vl-vi-u-s::before {
+  font-size: 1.3rem; }
+.vl-vi.vl-vi-u-m::before {
+  font-size: 1.7rem; }
+.vl-vi.vl-vi-u-l::before {
+  font-size: 2rem; }
+.vl-vi.vl-vi-u-xl::before {
+  font-size: 2.2rem; }
+.vl-vi.vl-vi-u-90deg::before {
+  display: inline-block;
+  transform: rotate(90deg); }
+.vl-vi.vl-vi-u-180deg::before {
+  display: inline-block;
+  transform: rotate(180deg); }
+.vl-vi.vl-vi-u-link::before {
+  display: inline-block;
+  margin-right: 1rem;
+  color: #000;
+  font-size: 1.3rem;
+  text-decoration: none; }
+.vl-vi.vl-vi-u-color-grey {
+  color: #cbd2da; }
+.vl-vi.vl-vi-u-badge {
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle; }
+  .vl-vi.vl-vi-u-badge::before {
+    margin: 0;
+    vertical-align: middle;
+    display: block; }
+  .vl-vi.vl-vi-u-badge--link {
+    margin-right: 1rem; }
+  .vl-vi.vl-vi-u-badge--link-after {
+    margin-left: 1rem; }
+.vl-vi.vl-vi-u-badge--positive {
+  background-color: #8bae00;
+  color: #fff; }
+  .vl-vi.vl-vi-u-badge--positive:hover, .vl-vi.vl-vi-u-badge--positive:focus, a:hover .vl-vi.vl-vi-u-badge--positive, a:focus .vl-vi.vl-vi-u-badge--positive {
+    background-color: #8bae00;
+    color: #fff; }
+.vl-vi.vl-vi-u-badge--action {
+  background-color: #05c;
+  color: #fff; }
+  .vl-vi.vl-vi-u-badge--action:hover, .vl-vi.vl-vi-u-badge--action:focus, a:hover .vl-vi.vl-vi-u-badge--action, a:focus .vl-vi.vl-vi-u-badge--action {
+    background-color: #003bb0;
+    color: #fff; }
+.vl-vi.vl-vi-u-badge--negative {
+  background-color: #db3434;
+  color: #fff; }
+  .vl-vi.vl-vi-u-badge--negative:hover, .vl-vi.vl-vi-u-badge--negative:focus, a:hover .vl-vi.vl-vi-u-badge--negative, a:focus .vl-vi.vl-vi-u-badge--negative {
+    background-color: #af2929;
+    color: #fff; }
+.vl-vi.vl-vi-u-badge--warning {
+  background-color: #ffc515;
+  color: #fff; }
+.vl-vi.vl-vi-u-badge--neutral {
+  background-color: #e8ebee;
+  color: #333332; }
+  .vl-vi.vl-vi-u-badge--neutral:hover, .vl-vi.vl-vi-u-badge--neutral:focus, a:hover .vl-vi.vl-vi-u-badge--neutral, a:focus .vl-vi.vl-vi-u-badge--neutral {
+    background-color: #05c;
+    color: #fff; }
+.vl-vi.vl-vi-u-badge--light {
+  background-color: #fff;
+  color: #333332; }
+  .vl-vi.vl-vi-u-badge--light:hover, .vl-vi.vl-vi-u-badge--light:focus, a:hover .vl-vi.vl-vi-u-badge--light, a:focus .vl-vi.vl-vi-u-badge--light {
+    background-color: #05c;
+    color: #fff; }
+.vl-vi.vl-vi-u-badge--xxsmall {
+  width: 1.8rem;
+  height: 1.8rem;
+  line-height: 1.8rem; }
+  .vl-vi.vl-vi-u-badge--xxsmall::before {
+    font-size: 0.8rem; }
+  @media screen and (max-width: 767px) {
+    .vl-vi.vl-vi-u-badge--xxsmall {
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 1.5rem; }
+      .vl-vi.vl-vi-u-badge--xxsmall::before {
+        font-size: 0.7rem; } }
+.vl-vi.vl-vi-u-badge--xsmall {
+  width: 1.8rem;
+  height: 1.8rem;
+  line-height: 1.8rem; }
+  .vl-vi.vl-vi-u-badge--xsmall::before {
+    font-size: 1.3rem; }
+  @media screen and (max-width: 767px) {
+    .vl-vi.vl-vi-u-badge--xsmall {
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 1.5rem; }
+      .vl-vi.vl-vi-u-badge--xsmall::before {
+        font-size: 1.1rem; } }
+.vl-vi.vl-vi-u-badge--small {
+  width: 2.6rem;
+  height: 2.6rem;
+  line-height: 2.6rem; }
+  .vl-vi.vl-vi-u-badge--small::before {
+    font-size: 1.3rem; }
+  @media screen and (max-width: 767px) {
+    .vl-vi.vl-vi-u-badge--small {
+      width: 2.2rem;
+      height: 2.2rem;
+      line-height: 2.2rem; }
+      .vl-vi.vl-vi-u-badge--small::before {
+        font-size: 1.2rem; } }
+.vl-vi.vl-vi-u-badge--medium {
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem; }
+  .vl-vi.vl-vi-u-badge--medium::before {
+    font-size: 2rem; }
+  @media screen and (max-width: 767px) {
+    .vl-vi.vl-vi-u-badge--medium {
+      width: 3rem;
+      height: 3rem;
+      line-height: 3rem; }
+      .vl-vi.vl-vi-u-badge--medium::before {
+        font-size: 1.5rem; } }
+.vl-vi.vl-vi-u-badge--large {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem; }
+  .vl-vi.vl-vi-u-badge--large::before {
+    font-size: 2.5rem; }
+  @media screen and (max-width: 767px) {
+    .vl-vi.vl-vi-u-badge--large {
+      width: 4rem;
+      height: 4rem;
+      line-height: 4rem; }
+      .vl-vi.vl-vi-u-badge--large::before {
+        font-size: 2rem; } }
+
+@media screen and (max-width: 767px) {
+  .vl-u-mobile-no-equal-height {
+    min-height: 0 !important; } }
+
+.js-vl-clamp-useless {
+  display: none !important; }
+
+.js .js-vl-show-checked {
+  display: none; }
+  .js .js-vl-show-checked--open {
+    display: block; }
+
+.js.vl-flexbox .js-vl-col-float-right {
+  position: absolute;
+  z-index: 1;
+  padding-bottom: 3rem;
+  right: 0; }
+  @media screen and (max-width: 767px) {
+    .js.vl-flexbox .js-vl-col-float-right {
+      position: static;
+      padding-bottom: 0;
+      margin-top: 1.5rem; } }
+
+@media screen and (max-width: 767px) {
+  .js-vl-col-float-right--pushed {
+    margin-top: 0 !important; } }
+
+[data-vl-show-on-select-content] {
+  display: none; }
+  [data-vl-show-on-select-content][data-vl-show="true"] {
+    display: block; }
+
+.vl-u-offset--spacing {
+  padding: 0 4.16667% 1rem; }
+
+.vl-u-offset--left {
+  margin-left: -4.16667%; }
+  @media screen and (max-width: 767px) {
+    .vl-u-offset--left {
+      margin-left: 0;
+      margin-right: 0; } }
+  .vl-u-offset--left.vl-u-offset--spacing {
+    padding-left: 0; }
+
+.vl-u-offset--right {
+  margin-right: -4.16667%; }
+  @media screen and (max-width: 767px) {
+    .vl-u-offset--right {
+      margin-left: 0;
+      margin-right: 0; } }
+  .vl-u-offset--right.vl-u-offset--spacing {
+    padding-right: 0; }
+
+.vl-u-float-right {
+  float: right !important; }
+
+.vl-u-float-left {
+  float: left !important; }
+
+.vl-u-float-none {
+  float: none !important; }
+
+.vl-u-display-block {
+  display: block !important; }
+
+.vl-u-display-inline-block {
+  display: inline-block !important; }
+
+.vl-u-display-flex {
+  display: flex !important; }
+
+.vl-u-display-inline-flex {
+  display: inline-flex !important; }
+
+.vl-u-clearfix::before, .vl-u-clearfix::after {
+  content: "";
+  display: table; }
+.vl-u-clearfix::after {
+  clear: both; }
+
+.vl-u-no-overflow {
+  overflow: hidden; }
+
+.vl-u-position-relative {
+  position: relative; }
+
+.vl-u-named-target::before,
+.vl-u-offset::before {
+  content: "";
+  display: block;
+  height: 90px;
+  margin: -90px 0 0;
+  z-index: -1;
+  position: relative; }
+
+.vl-u-named-target-wrapper {
+  position: relative; }
+
+.vl-u-named-target-dummy:empty,
+.vl-u-offset-dummy:empty {
+  display: block;
+  position: absolute;
+  top: 0;
+  margin-top: -90px;
+  height: 1px;
+  width: 1px;
+  visibility: hidden;
+  opacity: 0; }
+
+@media print {
+  .vl-u-hide-on-print {
+    display: none; }
+
+  .vl-u-show-on-print {
+    display: block; }
+
+  header,
+  footer {
+    display: none; }
+    .vl-main-content header, [role="main"] header, main header, .vl-main-content
+    footer, [role="main"]
+    footer, main
+    footer {
+      display: block; }
+
+  .iwgh3,
+  .iwgh2,
+  .iwgf3,
+  .iwgf2 {
+    display: none; } }
+.vl-u-hr {
+  border: 0;
+  border-bottom: 1px solid #cbd2da;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+::selection {
+  background: rgba(255, 230, 21, 0.3); }
+
+::-moz-selection {
+  background: rgba(255, 230, 21, 0.3); }
+
+.vl-u-spacer {
+  margin-bottom: 2rem; }
+
+.vl-u-spacer--xsmall {
+  margin-bottom: 1rem; }
+
+.vl-u-spacer--small {
+  margin-bottom: 1.5rem; }
+
+.vl-u-spacer--medium {
+  margin-bottom: 3rem; }
+
+.vl-u-spacer--large {
+  margin-bottom: 6rem; }
+  @media screen and (max-width: 767px) {
+    .vl-u-spacer--large {
+      margin-bottom: 3rem; } }
+
+.vl-u-spacer--none {
+  margin-bottom: 0; }
+
+.js-vl-sticky-placeholder {
+  position: relative; }
+  @media screen and (max-width: 767px) {
+    .js-vl-sticky-placeholder {
+      height: auto !important; } }
+
+.js-vl-sticky--absolute {
+  position: absolute; }
+
+.js-vl-sticky--fixed {
+  position: fixed; }
+
+.vl-u-sticky {
+  top: 0;
+  position: sticky; }
+
+.vl-u-sticky-gf {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .vl-u-sticky-gf {
+      display: block; } }
+  .vl-u-sticky-gf .vl-page {
+    flex: 1; }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      .vl-u-sticky-gf .vl-page {
+        overflow: hidden; } }
+
+.vl-u-text--ellipse {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.vl-u-text--uppercase {
+  text-transform: uppercase; }
+
+.vl-u-text--lowercase {
+  text-transform: lowercase; }
+
+.vl-u-text--capitalize::first-letter {
+  text-transform: uppercase; }
+
+.vl-u-text--success {
+  color: #8bae00; }
+
+.vl-u-text--warning {
+  color: #ffc515; }
+
+.vl-u-text--error {
+  color: #db3434; }
+
+.vl-u-text--bold {
+  font-weight: 500; }
+
+.vl-u-text--italic {
+  font-style: italic; }
+
+.vl-u-text--small {
+  font-size: 1.4rem !important; }
+
+.vl-u-text--xsmall {
+  font-size: 1.2rem !important; }
+
+.vl-u-text--xxsmall {
+  font-size: 1rem !important; }
+
+mark,
+.vl-u-text--marked {
+  background: #ffe615;
+  font-weight: 500;
+  color: #333332; }
+
+@media screen and (min-width: 1023px) {
+  .vl-u-visible--l {
+    display: block !important; } }
+@media screen and (max-width: 1023px) {
+  .vl-u-visible--m {
+    display: block !important; } }
+@media screen and (max-width: 767px) {
+  .vl-u-visible--s {
+    display: block !important; } }
+@media screen and (max-width: 500px) {
+  .vl-u-visible--xs {
+    display: block !important; } }
+
+.vl-u-hidden {
+  display: none; }
+  @media screen and (min-width: 1023px) {
+    .vl-u-hidden--l {
+      display: none !important; } }
+  @media screen and (max-width: 1023px) {
+    .vl-u-hidden--m {
+      display: none !important; } }
+  @media screen and (max-width: 767px) {
+    .vl-u-hidden--s {
+      display: none !important; } }
+  @media screen and (max-width: 500px) {
+    .vl-u-hidden--xs {
+      display: none !important; } }
 
 /*# sourceMappingURL=style.css.map */
