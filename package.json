@@ -30,14 +30,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/milieuinfo/webcomponent-vl-blueprint.git"
+    "url": "git+https://github.com/milieuinfo/webcomponent-vl-ui-blueprint.git"
   },
   "author": "DIDM",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/milieuinfo/webcomponent-vl-blueprint/issues"
+    "url": "https://github.com/milieuinfo/webcomponent-vl-ui-blueprint/issues"
   },
-  "homepage": "https://github.com/milieuinfo/webcomponent-vl-blueprint#readme",
+  "homepage": "https://github.com/milieuinfo/webcomponent-vl-ui-blueprint#readme",
   "dependencies": {
     "vl-ui-util": "^2.0.5",
     "vl-ui-core": "^2.0.0"
