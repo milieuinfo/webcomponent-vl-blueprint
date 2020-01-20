@@ -33,6 +33,7 @@
   },
   "author": "DIDM",
   "license": "MIT",
+  "main": "index.js",
   "bugs": {
     "url": "https://github.com/milieuinfo/webcomponent-vl-ui-blueprint/issues"
   },
