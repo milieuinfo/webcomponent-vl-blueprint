@@ -2,6 +2,19 @@
   "name": "vl-ui-blueprint",
   "version": "0.0.0",
   "description": "Blauwdruk voor nieuwe webcomponenten",
+  "author": "DIDM",
+  "license": "MIT",
+  "homepage": "https://github.com/milieuinfo/webcomponent-vl-ui-blueprint#readme",
+  "bugs": {
+    "url": "https://github.com/milieuinfo/webcomponent-vl-ui-blueprint/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milieuinfo/webcomponent-vl-ui-blueprint.git"
+  },
+  "publishConfig": {
+    "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"
+  },
   "scripts": {
     "prepare": "npm update --dev vl-ui-util && npm run prepare:util",
     "prepare:util": "npm explore vl-ui-util -- npm run util",
@@ -28,16 +41,6 @@
     "release:testless": "np --yolo",
     "demo": "http-server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/milieuinfo/webcomponent-vl-ui-blueprint.git"
-  },
-  "author": "DIDM",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/milieuinfo/webcomponent-vl-ui-blueprint/issues"
-  },
-  "homepage": "https://github.com/milieuinfo/webcomponent-vl-ui-blueprint#readme",
   "dependencies": {
     "vl-ui-util": "^2.0.5",
     "vl-ui-core": "^2.0.0"
@@ -45,8 +48,5 @@
   "devDependencies": {
     "@govflanders/vl-ui-util": "^3.9.1",
     "vl-ui-util": "^3.0.0"
-  },
-  "publishConfig": {
-    "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"
   }
 }
