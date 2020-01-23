@@ -34,6 +34,7 @@ replaceInFile package.json
 replaceInFile vl-blueprint.src.js
 replaceInFile style.scss
 replaceInFile README.md.template
+replaceInFile index.js
 
 replaceInFile bamboo-specs/bamboo.yml
 replaceInFile demo/vl-blueprint.html

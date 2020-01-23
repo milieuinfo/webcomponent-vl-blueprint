@@ -15,10 +15,10 @@
   "publishConfig": {
     "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"
   },
+  "main": "index.js",
   "scripts": {
     "prepare": "npm update --dev vl-ui-util && npm run prepare:util",
     "prepare:util": "npm explore vl-ui-util -- npm run util",
-    "pretest": "npm install chromedriver --chromedriver-force-download",
     "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "wct --config-file ./wct.local.conf.json",
     "test:e2e": "npm run test:server:start && npm run test:e2e:chrome && npm run test:e2e:firefox",
@@ -46,7 +46,8 @@
     "vl-ui-core": "^2.0.0"
   },
   "devDependencies": {
-    "@govflanders/vl-ui-util": "^3.9.1",
+    "@govflanders/vl-ui-util": "3.9.1",
+    "@govflanders/vl-ui-blueprint": "3.9.1",
     "vl-ui-util": "^3.0.0"
   }
 }
