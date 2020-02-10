@@ -31,10 +31,11 @@ mkdir -p $fullPath \
 replaceDescription
 
 replaceInFile package.json
-replaceInFile vl-blueprint.src.js
-replaceInFile style.scss
+replaceInFile src/vl-blueprint.src.js
+replaceInFile src/style.scss
 replaceInFile README.md.template
 replaceInFile index.js
+replaceInFile src/index.js
 
 replaceInFile bamboo-specs/bamboo.yml
 replaceInFile demo/vl-blueprint.html
@@ -47,7 +48,7 @@ cleanUp *bak
 cleanUp test/*bak
 cleanUp bamboo-specs/*bak
 
-rename vl-blueprint.src.js vl-${naam}.src.js
+rename src/vl-blueprint.src.js src/vl-${naam}.src.js
 rename README.md.template README.md
 
 rename demo/vl-blueprint.html demo/vl-${naam}.html
