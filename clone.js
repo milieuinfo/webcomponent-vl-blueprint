@@ -4,6 +4,7 @@ const readline = require('readline').createInterface({
 })
 
 const path = require('path');
+const fs = require('fs')
 
 readline.question(`Wat is de naam van de nieuwe webcomponent? `, (naam) => {
 	readline.question(`Wat is de description van de component? `, (description) => {
@@ -19,20 +20,6 @@ readline.question(`Wat is de naam van de nieuwe webcomponent? `, (naam) => {
 		});
 	});
 })
-
-function copyFolderSync(from, to, exclusions) {
-	const fs = require("fs");
-    fs.mkdirSync(to);
-    fs.readdirSync(from).forEach(element => {
-    	if (exclusions.indexOf(element) == -1) {
-    		if (fs.lstatSync(path.join(from, element)).isFile()) {
-    			fs.copyFileSync(path.join(from, element), path.join(to, element));
-    		} else {
-    			copyFolderSync(path.join(from, element), path.join(to, element), exclusions);
-    		}
-    	}
-    });
-}
 
 function initializeWebcomponent(options) {
 	copyFolderSync(process.cwd(), options.path, [".git", "node_modules", "util", "README.md", "clone.sh", "package-lock.json"]);
@@ -67,7 +54,6 @@ function replaceDescriptionInReadMe(path, description) {
 }
 
 function replaceDescriptionInPackageJson(path, description) {
-	var fs = require('fs')
 	const data = fs.readFileSync(path, 'utf8');
 	var packageJsonData = JSON.parse(data);
 	packageJsonData.description = description;
@@ -76,18 +62,24 @@ function replaceDescriptionInPackageJson(path, description) {
 }
 
 function replaceInFile(path, naam) {
-	replace(path, "blueprint", naam);
-	replace(path, "Blueprint", capitalize(naam));
-	replace(path, "BLUEPRINT", naam.toUpperCase());
+	const naamLowercase = naam;
+	const naamCamelcase = naam.replace(/(^|[\s-])\S/g, function (match) {
+	    return match.toUpperCase();
+	}).replace(/-/g, "");
+	const naamUppercase = naam.toUpperCase().replace(/-/g, "");
+	const data = fs.readFileSync(path, 'utf8');
+	var result = data;
+	result = result.replace(/blueprint/g, naamLowercase);
+	result = result.replace(/Blueprint/g, naamCamelcase);
+	result = result.replace(/BLUEPRINT/g, naamUppercase);
+	fs.writeFileSync(path, result, 'utf8');
 }
 
 function rename(src, dest) {
-	var fs = require('fs')
 	fs.renameSync(src, dest);	
 }
 
 function replace(someFile, search, replacement) {
-	var fs = require('fs')
 	const data = fs.readFileSync(someFile, 'utf8');
 	var result = data.replace(search, replacement);
 	fs.writeFileSync(someFile, result, 'utf8');
@@ -96,4 +88,17 @@ function replace(someFile, search, replacement) {
 function capitalize(s) {
   if (typeof s !== 'string') return '';
   return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+function copyFolderSync(from, to, exclusions) {
+    fs.mkdirSync(to);
+    fs.readdirSync(from).forEach(element => {
+    	if (exclusions.indexOf(element) == -1) {
+    		if (fs.lstatSync(path.join(from, element)).isFile()) {
+    			fs.copyFileSync(path.join(from, element), path.join(to, element));
+    		} else {
+    			copyFolderSync(path.join(from, element), path.join(to, element), exclusions);
+    		}
+    	}
+    });
 }
