@@ -1,6 +1,5 @@
 const VLBlueprint = require('../components/vl-blueprint');
-const Page = require('./page');
-const config = require('../config');
+const { Page, Config } = require('vl-ui-core').Test;
 
 class VLBlueprintPage extends Page {
     async _getBlueprint(selector) {

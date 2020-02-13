@@ -1,5 +1,4 @@
-
-const { assert, driver } = require('./test');
+const { assert, driver } = require('vl-ui-core').Test.Setup;
 const VLBlueprintPage = require('./pages/vl-blueprint.page');
 
 describe('vl-blueprint', async () => {
@@ -12,5 +11,7 @@ describe('vl-blueprint', async () => {
     it('', async () => {
     });
 
-    after(() => driver && driver.quit());
+    after(async () => { 
+        return driver.quit();
+    });
 });
