@@ -62,16 +62,16 @@ function replaceDescriptionInPackageJson(path, description) {
 }
 
 function replaceInFile(path, naam) {
-	const naamLowercase = naam;
-	const naamCamelcase = naam.replace(/(^|[\s-])\S/g, function (match) {
+	const naamLowercase = naam.toLowerCase();
+	const naamCamelcaseZonderDashes = naamLowercase.replace(/(^|[\s-])\S/g, function (match) {
 	    return match.toUpperCase();
 	}).replace(/-/g, "");
-	const naamUppercase = naam.toUpperCase().replace(/-/g, "");
+	const naamUppercaseZonderDashes = naamLowercase.toUpperCase().replace(/-/g, "");
 	const data = fs.readFileSync(path, 'utf8');
 	var result = data;
 	result = result.replace(/blueprint/g, naamLowercase);
-	result = result.replace(/Blueprint/g, naamCamelcase);
-	result = result.replace(/BLUEPRINT/g, naamUppercase);
+	result = result.replace(/Blueprint/g, naamCamelcaseZonderDashes);
+	result = result.replace(/BLUEPRINT/g, naamUppercaseZonderDashes);
 	fs.writeFileSync(path, result, 'utf8');
 }
 
@@ -93,7 +93,7 @@ function capitalize(s) {
 function copyFolderSync(from, to, exclusions) {
     fs.mkdirSync(to);
     fs.readdirSync(from).forEach(element => {
-    	if (exclusions.indexOf(element) == -1) {
+    	if (!exclusions.includes(element)) {
     		if (fs.lstatSync(path.join(from, element)).isFile()) {
     			fs.copyFileSync(path.join(from, element), path.join(to, element));
     		} else {
