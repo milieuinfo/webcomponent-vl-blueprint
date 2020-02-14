@@ -73,6 +73,6 @@
   "devDependencies": {
     "@govflanders/vl-ui-util": "3.9.1",
     "@govflanders/vl-ui-blueprint": "3.9.1",
-    "vl-ui-util": "^4.0.1"
+    "vl-ui-util": "^4.0.3"
   }
 }
