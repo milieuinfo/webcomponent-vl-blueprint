@@ -11,7 +11,4 @@ describe('vl-blueprint', async () => {
     it('', async () => {
     });
 
-    after(async () => { 
-        return driver.quit();
-    });
 });
