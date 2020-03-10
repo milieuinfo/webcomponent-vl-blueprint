@@ -26,7 +26,7 @@ function initializeWebcomponent(options) {
 	replaceDescriptionInReadMe(path.resolve(options.path, "README.md.template"), options.description);
 	replaceDescriptionInPackageJson(path.resolve(options.path, "package.json"), options.description);
 	replaceInFile(path.resolve(options.path, "package.json"), options.naam);
-	replaceInFile(path.resolve(options.path, "src/vl-blueprint.src.js"), options.naam);
+	replaceInFile(path.resolve(options.path, "src/vl-blueprint.js"), options.naam);
 	replaceInFile(path.resolve(options.path, "src/style.scss"), options.naam);
 	replaceInFile(path.resolve(options.path, "README.md.template"), options.naam);
 	replaceInFile(path.resolve(options.path, "index.js"), options.naam);
@@ -39,7 +39,7 @@ function initializeWebcomponent(options) {
 	replaceInFile(path.resolve(options.path, "test/e2e/blueprint.test.js"), options.naam);
 	replaceInFile(path.resolve(options.path, "test/unit/vl-blueprint.test.html"), options.naam);
 
-	rename(path.resolve(options.path, "src/vl-blueprint.src.js"), path.resolve(options.path, `src/vl-${options.naam}.src.js`));
+	rename(path.resolve(options.path, "src/vl-blueprint.js"), path.resolve(options.path, `src/vl-${options.naam}.js`));
 	rename(path.resolve(options.path, "README.md.template"), path.resolve(options.path, "README.md"));
 
 	rename(path.resolve(options.path, "demo/vl-blueprint.html"), path.resolve(options.path, `demo/vl-${options.naam}.html`));
