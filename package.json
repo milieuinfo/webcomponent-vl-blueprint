@@ -25,7 +25,7 @@
   "scripts": {
     "prepare": "npm update --dev vl-ui-util && npm run prepare:util",
     "prepare:util": "npm explore vl-ui-util -- npm run util",
-    "test": "npm run test:unit && npm run test:e2e",
+    "test": "npm run test:unit && npm run test:e2e && npm run test:performance:run",
     "test:unit": "wct --config-file ./wct.local.conf.json",
     "test:e2e": "npm run test:server:start && npm run test:e2e:chrome && npm run test:e2e:firefox",
     "test:e2e:grid": "npm run test:server:start && npm run test:e2e:chrome:grid && npm run test:e2e:firefox:grid",
@@ -38,6 +38,7 @@
     "test:e2e:opera": "mocha --opera",
     "test:e2e:safari": "mocha --safari",
     "test:server:start": "http-server &",
+    "test:performance:run": "npm run test:performance:generate && docker-compose -f docker-compose-performance.yml up --force-recreate --exit-code-from sitespeed-firefox",
     "release": "np",
     "release:prepare": "npm explore vl-ui-util -- npm run release-component:prepare $(pwd) blueprint",
     "release:testless": "np --yolo",
