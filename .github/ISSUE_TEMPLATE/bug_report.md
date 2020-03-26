@@ -16,7 +16,7 @@ Stappen om het probleem te reproduceren en indien mogelijks een code snippet:
 `code snippet`
 
 **Gewenst gedrag**
-Licht kort en duidelijk toe wat het gewenst gedragd is.
+Licht kort en duidelijk toe wat het gewenst gedrag is.
 
 **Screenshots**
 Indien mogelijk, voeg hier screenshots/logs/videos toe
