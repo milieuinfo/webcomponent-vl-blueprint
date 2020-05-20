@@ -1,11 +1,11 @@
-import { VlElement, define } from '/node_modules/vl-ui-core/dist/vl-core.js';
+import { vlElement, define } from '/node_modules/vl-ui-core/dist/vl-core.js';
 
 /**
  * VlBlueprint
  * @class
  * @classdesc 
  * 
- * @extends VlElement
+ * @extends vlElement
  * 
  * @property 
  * 
@@ -14,6 +14,6 @@ import { VlElement, define } from '/node_modules/vl-ui-core/dist/vl-core.js';
  * @see {@link https://webcomponenten.omgeving.vlaanderen.be/demo/vl-blueprint.html|Demo}
  * 
  */
-export class VlBlueprint extends VlElement(HTMLElement) {}
+export class VlBlueprint extends vlElement(HTMLElement) {}
 
 define('vl-blueprint', VlBlueprint);
