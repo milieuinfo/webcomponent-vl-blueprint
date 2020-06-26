@@ -1,1 +1,6 @@
 node_modules
+.sass-cache
+.idea/
+*.css.map
+.vscode/**
+.DS_Store
