@@ -19,7 +19,6 @@ readline.question(`Wat is de naam van de nieuwe webcomponent? `, (naam) => {
         path: path ? path : defaultPath,
       });
       readline.close();
-      // await setupGitRepo();
     });
   });
 });
@@ -50,18 +49,20 @@ async function initializeWebcomponent(options) {
   await rename(path.resolve(options.path, 'test/e2e/pages/vl-blueprint.page.js'), path.resolve(options.path, `test/e2e/pages/vl-${options.naam}.page.js`));
   await rename(path.resolve(options.path, 'test/e2e/blueprint.test.js'), path.resolve(options.path, `test/e2e/${options.naam}.test.js`));
   await rename(path.resolve(options.path, 'test/unit/vl-blueprint.test.html'), path.resolve(options.path, `test/unit/vl-${options.naam}.test.html`));
+
+  await setupGitRepo(options);
 }
 
-function replaceDescriptionInReadMe(path, description) {
-  replace(path, '@description@', description);
+async function replaceDescriptionInReadMe(path, description) {
+  return replace(path, '@description@', description);
 }
 
 async function replaceDescriptionInPackageJson(path, description) {
-  const data = await fs.readFile(path, 'utf8');
+  const data = await fs.promises.readFile(path, 'utf8');
   const packageJsonData = JSON.parse(data);
   packageJsonData.description = description;
   const result = JSON.stringify(packageJsonData, null, '\t');
-  await fs.writeFile(path, result, 'utf8');
+  await fs.promises.writeFile(path, result, 'utf8');
 }
 
 async function replaceInFile(path, naam) {
@@ -70,55 +71,52 @@ async function replaceInFile(path, naam) {
     return match.toUpperCase();
   }).replace(/-/g, '');
   const naamUppercaseZonderDashes = naamLowercase.toUpperCase().replace(/-/g, '');
-  const data = await fs.readFile(path, 'utf8');
+  const data = await fs.promises.readFile(path, 'utf8');
   let result = data;
   result = result.replace(/blueprint/g, naamLowercase);
   result = result.replace(/Blueprint/g, naamCamelcaseZonderDashes);
   result = result.replace(/BLUEPRINT/g, naamUppercaseZonderDashes);
-  await fs.writeFile(path, result, 'utf8');
+  return fs.promises.writeFile(path, result, 'utf8');
 }
 
 async function rename(src, dest) {
-  await fs.rename(src, dest);
+  await fs.promises.rename(src, dest);
 }
 
-function replace(someFile, search, replacement) {
-  const data = fs.readFileSync(someFile, 'utf8');
-  const result = data.replace(search, replacement);
-  fs.writeFileSync(someFile, result, 'utf8');
+async function replace(someFile, search, replacement) {
+  const data = await fs.promises.readFile(someFile, 'utf8');
+  const result = await data.replace(search, replacement);
+  return fs.promises.writeFile(someFile, result, 'utf8');
 }
 
 async function copyFolder(from, to, exclusions) {
-  await fs.mkdir(to, (err) => {
-    if (err) {
-      throw err;
-    }
-  });
+  try {
+    await fs.promises.mkdir(to);
+    const dirs = await fs.promises.readdir(from);
 
-  const dirs = await fs.readdir(from, (err) => {
-    if (err) {
-      throw err;
+    for (let index = 0; index < dirs.length; index++) {
+      const element = dirs[index];
+      if (!exclusions.includes(element)) {
+        if ((await fs.promises.lstat(path.join(from, element))).isFile()) {
+          await fs.promises.copyFile(path.join(from, element), path.join(to, element));
+        } else {
+          await copyFolder(path.join(from, element), path.join(to, element), exclusions);
+        }
+      }
     }
-  });
-
-  for (let index = 0; index < dirs.length; index++) {
-    const dir = dirs[index];
-    if (!exclusions.includes(dir)) {
-      await fs.copyFile(path.join(from, dir), path.join(to, dir));
-    } else {
-      await copyFolder(path.join(from, element), path.join(to, element), exclusions);
-    }
+  } catch (e) {
+    console.error(e);
   }
 }
 
 async function setupGitRepo(options) {
-  const git = simpleGit();
+  const git = simpleGit({'baseDir': options.path});
   try {
     await git.init();
-    await git.addRemote('origin', `https://github.com/milieuinfo/${options.name}.git`);
-    await git.add();
+    await git.add('./*');
     await git.commit('Automated commit by vl-blueprint');
-    await git.push('origin', 'master');
+    await git.addRemote('origin', `https://github.com/milieuinfo/${options.naam}.git`);
+    console.log(`Setup van nieuw project klaar! \n Lokale git repository is aangemaakt met remote https://github.com/milieuinfo/${options.naam}.git \n VERGEET NIET DE REPOSITORY OP GITHUB AAN TE MAKEN!\n Bedankt voor het vertrouwen in UIG!`);
   } catch (e) {
     console.log(e);
   }
