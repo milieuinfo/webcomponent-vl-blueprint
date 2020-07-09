@@ -6,7 +6,7 @@ const readline = require('readline').createInterface({
 const path = require('path');
 const fs = require('fs');
 
-readline.question(`Wat is de naam van de nieuwe webcomponent? `, (naam) => {
+readline.question(`Wat is de naam van de nieuwe webcomponent (prefix webcomponent-vl-ui wordt automatisch toegevoegd)? `, (naam) => {
   readline.question(`Wat is de description van de component? `, (description) => {
     const currentPath = process.cwd();
     const defaultPath = path.resolve(currentPath, '../webcomponent-vl-ui-' + naam);
