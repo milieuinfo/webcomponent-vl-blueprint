@@ -22,7 +22,7 @@ readline.question(`Wat is de naam van de nieuwe webcomponent? `, (naam) => {
 });
 
 function initializeWebcomponent(options) {
-  copyFolderSync(process.cwd(), options.path, ['.git', 'node_modules', 'util', 'README.md', 'clone.sh', 'package-lock.json']);
+  copyFolderSync(process.cwd(), options.path, ['.git', 'node_modules', 'util', 'README.md', 'clone.sh', 'clone.js', 'package-lock.json']);
   replaceDescriptionInReadMe(path.resolve(options.path, 'README.md.template'), options.description);
   replaceDescriptionInPackageJson(path.resolve(options.path, 'package.json'), options.description);
   replaceInFile(path.resolve(options.path, 'package.json'), options.naam);
