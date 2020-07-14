@@ -8,7 +8,7 @@ const readline = require('readline').createInterface({
 const path = require('path');
 const fs = require('fs');
 
-readline.question(`Wat is de naam van de nieuwe webcomponent? `, (naam) => {
+readline.question(`Wat is de naam van de nieuwe webcomponent (prefix webcomponent-vl-ui- wordt automatisch toegevoegd)? `, (naam) => {
   readline.question(`Wat is de description van de component? `, (description) => {
     const currentPath = process.cwd();
     const defaultPath = path.resolve(currentPath, '../webcomponent-vl-ui-' + naam);
@@ -24,7 +24,7 @@ readline.question(`Wat is de naam van de nieuwe webcomponent? `, (naam) => {
 });
 
 async function initializeWebcomponent(options) {
-  await copyFolder(__dirname, options.path, ['.git', 'node_modules', 'util', 'README.md', 'clone.sh', 'package-lock.json']);
+  copyFolderSync(process.cwd(), options.path, ['.git', 'node_modules', 'util', 'README.md', 'clone.sh', 'clone.js', 'package-lock.json']);
   replaceDescriptionInReadMe(path.resolve(options.path, 'README.md.template'), options.description);
   await replaceDescriptionInPackageJson(path.resolve(options.path, 'package.json'), options.description);
   await replaceInFile(path.resolve(options.path, 'package.json'), options.naam);
