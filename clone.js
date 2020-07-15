@@ -13,7 +13,7 @@ readline.question(`Wat is de naam van de nieuwe webcomponent (prefix webcomponen
     const currentPath = process.cwd();
     const defaultPath = path.resolve(currentPath, '../webcomponent-vl-ui-' + naam);
     readline.question(`Waar mag het project opgeslagen worden? [${defaultPath}]: `, async (path) => {
-      initializeWebcomponent({
+      await initializeWebcomponent({
         naam: naam,
         description: description,
         path: path ? path : defaultPath,
@@ -24,7 +24,7 @@ readline.question(`Wat is de naam van de nieuwe webcomponent (prefix webcomponen
 });
 
 async function initializeWebcomponent(options) {
-  copyFolderSync(process.cwd(), options.path, ['.git', 'node_modules', 'util', 'README.md', 'clone.sh', 'clone.js', 'package-lock.json']);
+  copyFolder(process.cwd(), options.path, ['.git', 'node_modules', 'util', 'README.md', 'clone.sh', 'clone.js', 'package-lock.json']);
   replaceDescriptionInReadMe(path.resolve(options.path, 'README.md.template'), options.description);
   await replaceDescriptionInPackageJson(path.resolve(options.path, 'package.json'), options.description);
   await replaceInFile(path.resolve(options.path, 'package.json'), options.naam);
