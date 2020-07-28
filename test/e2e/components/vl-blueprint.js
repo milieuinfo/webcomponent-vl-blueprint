@@ -1,5 +1,5 @@
 const {VlElement} = require('vl-ui-core').Test;
 
-class VLBlueprint extends VlElement {}
+class VlBlueprint extends VlElement {}
 
-module.exports = VLBlueprint;
+module.exports = VlBlueprint;
