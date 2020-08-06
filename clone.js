@@ -7,6 +7,7 @@ const readline = require('readline').createInterface({
 
 const path = require('path');
 const fs = require('fs');
+const { exit } = require('process');
 
 readline.question(`Wat is de naam van de nieuwe webcomponent (prefix webcomponent-vl-ui- wordt automatisch toegevoegd)? `, (naam) => {
   readline.question(`Wat is de description van de component? `, (description) => {
@@ -24,8 +25,8 @@ readline.question(`Wat is de naam van de nieuwe webcomponent (prefix webcomponen
 });
 
 async function initializeWebcomponent(options) {
-  copyFolder(process.cwd(), options.path, ['.git', 'node_modules', 'util', 'README.md', 'clone.sh', 'clone.js', 'package-lock.json']);
-  replaceDescriptionInReadMe(path.resolve(options.path, 'README.md.template'), options.description);
+  await copyFolder(process.cwd(), options.path, ['.git', 'node_modules', 'util', 'README.md', 'clone.sh', 'clone.js', 'package-lock.json']);
+  await replaceDescriptionInReadMe(path.resolve(options.path, 'README.md.template'), options.description);
   await replaceDescriptionInPackageJson(path.resolve(options.path, 'package.json'), options.description);
   await replaceInFile(path.resolve(options.path, 'package.json'), options.naam);
   await replaceInFile(path.resolve(options.path, 'src/vl-blueprint.js'), options.naam);
