@@ -22,6 +22,8 @@ async function initializeWebcomponent(options) {
     await replaceInFile(path.resolve(savePath, 'test/e2e/blueprint.test.js'), options.name);
     await replaceInFile(path.resolve(savePath, 'test/unit/vl-blueprint.test.html'), options.name);
     
+    await replace(path.resolve(savePath, 'test/e2e/pages/vl-blueprint.page.js'), 'Config.baseUrl', `Config.baseUrl + '/demo/vl-${options.name}.html'`);
+    
     await rename(path.resolve(savePath, 'src/vl-blueprint.js'), path.resolve(savePath, `src/vl-${options.name}.js`));
     await rename(path.resolve(savePath, 'README.md.template'), path.resolve(savePath, 'README.md'));
     
