@@ -1,10 +1,11 @@
 {
-  "expanded": true,
-  "npm": true,
-  "plugins": {
-      "local": {
-          "browsers": ["chrome", "firefox"]
-      }
-  },
-  "suites": ["test/unit/*.test.html"]
-}
+    "expanded": true,
+    "npm": true,
+    "plugins": {
+        "local": {
+            "browsers": ["chrome", "firefox"]
+        }
+    },
+    "suites": ["test/unit/*.test.html"]
+  }
+  

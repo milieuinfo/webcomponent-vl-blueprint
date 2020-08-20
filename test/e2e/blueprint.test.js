@@ -1,16 +1,14 @@
-
-const { assert, driver } = require('./test');
-const VLBlueprintPage = require('./pages/vl-blueprint.page');
+/* eslint-disable no-unused-vars */
+const {assert, driver} = require('vl-ui-core').Test.Setup;
+const VlBlueprintPage = require('./pages/vl-blueprint.page');
 
 describe('vl-blueprint', async () => {
-    const VLBlueprintPage = new VLBlueprintPage(driver);
+  const vlBlueprintPage = new VlBlueprintPage(driver);
 
-    before(() => {
-        return VLBlueprintPage.load();
-    });
+  before(() => {
+    return vlBlueprintPage.load();
+  });
 
-    it('', async () => {
-    });
-
-    after(() => driver && driver.quit());
+  it('', async () => {
+  });
 });

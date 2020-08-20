@@ -4,6 +4,13 @@
   "description": "Blauwdruk voor nieuwe webcomponenten",
   "author": "DIDM",
   "license": "MIT",
+  "main": "./src/index.js",
+  "exports": {
+    "require": "./index.js",
+    "import": "./src/index.js",
+    "node": "./index.js",
+    "default": "./index.js"
+  },
   "homepage": "https://github.com/milieuinfo/webcomponent-vl-ui-blueprint#readme",
   "bugs": {
     "url": "https://github.com/milieuinfo/webcomponent-vl-ui-blueprint/issues"
@@ -15,39 +22,29 @@
   "publishConfig": {
     "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"
   },
-  "main": "index.js",
   "scripts": {
     "prepare": "npm update --dev vl-ui-util && npm run prepare:util",
     "prepare:util": "npm explore vl-ui-util -- npm run util",
-    "test": "npm run test:unit && npm run test:e2e",
-    "test:unit": "wct --config-file ./wct.local.conf.json",
-    "test:e2e": "npm run test:server:start && npm run test:e2e:chrome && npm run test:e2e:firefox",
-    "test:e2e:grid": "npm run test:server:start && npm run test:e2e:chrome:grid && npm run test:e2e:firefox:grid",
-    "test:grid": "wct --config-file ./wct.docker.conf.json && npm run test:e2e:grid",
-    "posttest:e2e": "pkill -f http-server",
-    "test:e2e:chrome": "mocha --chrome ",
-    "test:e2e:chrome:grid": "mocha  --chrome --grid",
-    "test:e2e:firefox": "mocha --firefox",
-    "test:e2e:firefox:grid": "mocha --firefox --grid",
-    "test:e2e:opera": "mocha --opera",
-    "test:e2e:safari": "mocha --safari",
-    "test:server:start": "http-server &",
-    "release": "np",
-    "release:prepare": "npm run release:prepare:build && npm run release:prepare:imports && npm run release:prepare:css && npm run release:prepare:commit",
-    "release:prepare:build": "minify *.src.js > vl-blueprint.js",
-    "release:prepare:imports": "replace '/node_modules/vl-ui-core/vl-core.src.js' '/node_modules/vl-ui-core/vl-core.js' vl-blueprint.js",
-    "release:prepare:css": "replace '\\.\\./style.css' '/node_modules/vl-ui-blueprint/style.css' vl-blueprint.js",
-    "release:prepare:commit": "git add -f vl-blueprint.js && git commit --amend --no-edit && git pull",
-    "release:testless": "np --yolo",
+    "test": "npm explore vl-ui-util -- npm run test:component",
+    "test:grid": "npm explore vl-ui-util -- npm run test:component:grid",
+    "test:unit": "npm explore vl-ui-util -- npm run test:component:unit",
+    "test:unit:grid": "npm explore vl-ui-util -- npm run test:component:unit:grid",
+    "test:e2e": "npm explore vl-ui-util -- npm run test:component:e2e",
+    "test:e2e:grid": "npm explore vl-ui-util -- npm run test:component:e2e:grid",
+    "release": "npm explore vl-ui-util -- npm run release",
+    "release:prepare": "npm explore vl-ui-util -- npm run release-component:prepare $(pwd) blueprint",
+    "release:testless": "npm explore vl-ui-util -- npm run release:testless",
     "demo": "http-server"
   },
   "dependencies": {
-    "vl-ui-util": "^2.0.5",
-    "vl-ui-core": "^2.0.0"
+    "vl-ui-core": "5.5.5"
+  },
+  "peerDependencies": {
+    "vl-ui-core": "^5.5.5"
   },
   "devDependencies": {
     "@govflanders/vl-ui-util": "3.9.1",
-    "@govflanders/vl-ui-blueprint": "3.9.1",
-    "vl-ui-util": "^3.0.0"
+    "simple-git": "^2.18.0",
+    "vl-ui-util": "^5.2.9"
   }
 }

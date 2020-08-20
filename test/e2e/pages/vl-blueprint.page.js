@@ -1,15 +1,15 @@
-const VLBlueprint = require('../components/vl-blueprint');
-const Page = require('./page');
-const config = require('../config');
+/* eslint-disable no-unused-vars */
+const VlBlueprint = require('../components/vl-blueprint');
+const {Page, Config} = require('vl-ui-core').Test;
 
-class VLBlueprintPage extends Page {
-    async _getBlueprint(selector) {
-        return new VlBlueprint(this.driver, selector);
-    }
+class VlBlueprintPage extends Page {
+  async _getBlueprint(selector) {
+    return new VlBlueprint(this.driver, selector);
+  }
 
-    async load() {
-        await super.load(config.baseUrl);
-    }
+  async load() {
+    await super.load(Config.baseUrl);
+  }
 }
 
-module.exports = VLBlueprintPage;
+module.exports = VlBlueprintPage;

@@ -1,3 +1,5 @@
-module.exports = { 
-    'VlBlueprint': require('./test/e2e/components/vl-blueprint')
-}
+module.exports = {
+  Test: {
+    VlBlueprint: require('./test/e2e/components/vl-blueprint.js'),
+  },
+};
