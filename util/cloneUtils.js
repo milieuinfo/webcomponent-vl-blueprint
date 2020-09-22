@@ -6,7 +6,8 @@ async function initializeWebcomponent(options) {
   try {
     const savePath = getSavePath(options);
     await copyFolder(process.cwd(), savePath, ['.git', 'node_modules', 'util', 'README.md', 'clone.sh', 'clone.js', 'package-lock.json']);
-    await replaceDescriptionInReadMe(path.resolve(savePath, 'README.md.template'), options.description);
+    await replaceDescription(path.resolve(savePath, 'README.md.template'), options.description);
+    await replaceDescription(path.resolve(savePath, 'src/vl-blueprint.js'), options.description);
     await replaceDescriptionInPackageJson(path.resolve(savePath, 'package.json'), options.description);
     await replaceInFile(path.resolve(savePath, 'package.json'), options.name);
     await replaceInFile(path.resolve(savePath, 'src/vl-blueprint.js'), options.name);
@@ -44,7 +45,7 @@ function getSavePath(options) {
   return path.join(options.path, `webcomponent-vl-ui-${options.name}`);
 }
 
-async function replaceDescriptionInReadMe(path, description) {
+async function replaceDescription(path, description) {
   return replace(path, '@description@', description);
 }
 

@@ -3,7 +3,7 @@ import {vlElement, define} from '/node_modules/vl-ui-core/dist/vl-core.js';
 /**
  * VlBlueprint
  * @class
- * @classdesc
+ * @classdesc @description@
  *
  * @extends HTMLElement
  *
