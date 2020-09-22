@@ -13,4 +13,4 @@ async function setupGitRepo(options) {
   }
 }
 
-module.exports = {setupGitRepo}
+module.exports = {setupGitRepo};
