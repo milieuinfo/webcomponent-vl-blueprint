@@ -17,7 +17,7 @@ const argv = require('yargs')
     .argv;
 
 (async () => {
-    await initializeWebcomponent({'name': argv.name, 'description': argv.description, 'path': argv.path});
+  await initializeWebcomponent({'name': argv.name, 'description': argv.description, 'path': argv.path});
 })();
 
 console.log(`Webcomponent ${argv.name} aangemaakt in ${argv.path}`);
