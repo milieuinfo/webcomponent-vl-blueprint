@@ -4,8 +4,13 @@
     "plugins": {
         "local": {
             "browsers": ["chrome", "firefox"]
+        },
+        "junit-reporter": {
+            "output": {
+                "path": "../../test/",
+                "name": "wct-results.xml"
+          }
         }
     },
     "suites": ["test/unit/*.test.html"]
-  }
-  
+}
