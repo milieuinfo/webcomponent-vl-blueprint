@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const VlBlueprint = require('../components/vl-blueprint');
 const {Page, Config} = require('vl-ui-core').Test;
 
