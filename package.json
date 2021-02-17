@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@govflanders/vl-ui-util": "^3.12.3",
-    "simple-git": "^2.31.0",
+    "simple-git": "^2.35.0",
     "vl-ui-util": "^5.3.4"
   }
 }
